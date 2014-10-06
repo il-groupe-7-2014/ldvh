@@ -4,9 +4,6 @@
 <?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
 <uml:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xmi:id="_4r5_QEe3EeSpms1M6EAlWQ" name="analyse">
   <eAnnotations xmi:id="_4r5_QUe3EeSpms1M6EAlWQ" source="uml2.diagrams">
-    <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_LLe48Ee4EeSpms1M6EAlWQ" type="Usecase" name="diagramme de cas d'utilisation">
-      <element xsi:nil="true"/>
-    </contents>
     <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_SAmWoEe4EeSpms1M6EAlWQ" type="Class" name="diagramme de classes métier">
       <children xmi:type="umlnotation:UMLShape" xmi:id="_-og1sEe5EeSpms1M6EAlWQ" element="_-n3VcEe5EeSpms1M6EAlWQ" fontName="Cantarell" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
         <children xmi:type="notation:DecorationNode" xmi:id="_-oiq4Ee5EeSpms1M6EAlWQ" type="ImageCompartment">
@@ -270,6 +267,548 @@
         <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XvmYcUfGEeSpms1M6EAlWQ" points="[40, 102, 1637, -2221]$[40, 736, 1637, -1587]$[-1538, 736, 59, -1587]$[-1538, 2323, 59, 0]"/>
         <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gdsJ8EfGEeSpms1M6EAlWQ" id="(0.4999999999999997,0.9635290031260855)"/>
         <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gdsJ8UfGEeSpms1M6EAlWQ" id="(0.7502673175412922,0.0)"/>
+      </edges>
+    </contents>
+    <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_nESSUE2LEeS6M6K946MBzQ" type="Usecase" name="diagramme de cas d'utilisation">
+      <children xmi:type="umlnotation:UMLComponent" xmi:id="_nESSUU2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESSUk2LEeS6M6K946MBzQ" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_nESSU02LEeS6M6K946MBzQ" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSVE2LEeS6M6K946MBzQ" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSVU2LEeS6M6K946MBzQ" type="Kind"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSVk2LEeS6M6K946MBzQ" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSV02LEeS6M6K946MBzQ" type="Parent"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESSWE2LEeS6M6K946MBzQ" visible="false" type="AttributeCompartment"/>
+        <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESSWU2LEeS6M6K946MBzQ" visible="false" type="OperationCompartment"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_nESSWk2LEeS6M6K946MBzQ" visible="false" type="RealizationListCompartment"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_nESSW02LEeS6M6K946MBzQ" visible="false" type="RequiredInterfaceListCompartment"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_nESSXE2LEeS6M6K946MBzQ" visible="false" type="ProvidedInterfaceListCompartment"/>
+        <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_nESSXU2LEeS6M6K946MBzQ" type="UseCaseShapeCompartment">
+          <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_nESSXk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="notation:DecorationNode" xmi:id="_nESSX02LEeS6M6K946MBzQ" type="ImageCompartment">
+              <layoutConstraint xmi:type="notation:Size" xmi:id="_nESSYE2LEeS6M6K946MBzQ" width="2216" height="1322"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSYU2LEeS6M6K946MBzQ" type="Stereotype"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSYk2LEeS6M6K946MBzQ" type="Name"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSY02LEeS6M6K946MBzQ" type="Parent"/>
+            <children xmi:type="notation:ListCompartment" xmi:id="_nESSZE2LEeS6M6K946MBzQ" visible="false" type="Extension_Points"/>
+            <element xmi:type="uml:UseCase" href="platform:/resource/cccc/analyse.emx#_qfNWYEe_EeSdvZkOkktufQ?analyse/Logiciel%20de%20création%20de%20LDVH/Creer%20un%20livre?"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSZU2LEeS6M6K946MBzQ" x="238" y="292"/>
+          </children>
+          <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_nESSZk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="notation:DecorationNode" xmi:id="_nESSZ02LEeS6M6K946MBzQ" type="ImageCompartment">
+              <layoutConstraint xmi:type="notation:Size" xmi:id="_nESSaE2LEeS6M6K946MBzQ" width="2216" height="1322"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSaU2LEeS6M6K946MBzQ" type="Stereotype"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSak2LEeS6M6K946MBzQ" type="Name"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSa02LEeS6M6K946MBzQ" type="Parent"/>
+            <children xmi:type="notation:ListCompartment" xmi:id="_nESSbE2LEeS6M6K946MBzQ" visible="false" type="Extension_Points"/>
+            <element xmi:type="uml:UseCase" href="platform:/resource/cccc/analyse.emx#_qshZoEe_EeSdvZkOkktufQ?analyse/Sauvegarder%20un%20livre?"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSbU2LEeS6M6K946MBzQ" x="-158" y="4436"/>
+          </children>
+          <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_nESSbk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="notation:DecorationNode" xmi:id="_nESSb02LEeS6M6K946MBzQ" type="ImageCompartment">
+              <layoutConstraint xmi:type="notation:Size" xmi:id="_nESScE2LEeS6M6K946MBzQ" width="2216" height="1322"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESScU2LEeS6M6K946MBzQ" type="Stereotype"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSck2LEeS6M6K946MBzQ" type="Name"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSc02LEeS6M6K946MBzQ" type="Parent"/>
+            <children xmi:type="notation:ListCompartment" xmi:id="_nESSdE2LEeS6M6K946MBzQ" visible="false" type="Extension_Points"/>
+            <element xmi:type="uml:UseCase" href="platform:/resource/cccc/analyse.emx#_2R1P4Ee_EeSdvZkOkktufQ?analyse/Charger%20un%20livre?"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSdU2LEeS6M6K946MBzQ" x="238" y="2324"/>
+          </children>
+          <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_nESSdk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="notation:DecorationNode" xmi:id="_nESSd02LEeS6M6K946MBzQ" type="ImageCompartment">
+              <layoutConstraint xmi:type="notation:Size" xmi:id="_nESSeE2LEeS6M6K946MBzQ" width="2216" height="1322"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSeU2LEeS6M6K946MBzQ" type="Stereotype"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSek2LEeS6M6K946MBzQ" type="Name"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSe02LEeS6M6K946MBzQ" type="Parent"/>
+            <children xmi:type="notation:ListCompartment" xmi:id="_nESSfE2LEeS6M6K946MBzQ" visible="false" type="Extension_Points"/>
+            <element xmi:type="uml:UseCase" href="platform:/resource/cccc/analyse.emx#_BjWncEfAEeSdvZkOkktufQ?analyse/Générer%20un%20livre?"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSfU2LEeS6M6K946MBzQ" x="6706" y="1004"/>
+          </children>
+          <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_nESSfk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="notation:DecorationNode" xmi:id="_nESSf02LEeS6M6K946MBzQ" type="ImageCompartment">
+              <layoutConstraint xmi:type="notation:Size" xmi:id="_nESSgE2LEeS6M6K946MBzQ" width="2216" height="1322"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSgU2LEeS6M6K946MBzQ" type="Stereotype"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSgk2LEeS6M6K946MBzQ" type="Name"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSg02LEeS6M6K946MBzQ" type="Parent"/>
+            <children xmi:type="notation:ListCompartment" xmi:id="_nESShE2LEeS6M6K946MBzQ" visible="false" type="Extension_Points"/>
+            <element xmi:type="uml:UseCase" href="platform:/resource/cccc/analyse.emx#_LLTZIEfAEeSdvZkOkktufQ?analyse/Générer%20une%20version%20imprimable?"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESShU2LEeS6M6K946MBzQ" x="10098" y="2456"/>
+          </children>
+          <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_nESShk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="notation:DecorationNode" xmi:id="_nESSh02LEeS6M6K946MBzQ" type="ImageCompartment">
+              <layoutConstraint xmi:type="notation:Size" xmi:id="_nESSiE2LEeS6M6K946MBzQ" width="2216" height="1322"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSiU2LEeS6M6K946MBzQ" type="Stereotype"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSik2LEeS6M6K946MBzQ" type="Name"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSi02LEeS6M6K946MBzQ" type="Parent"/>
+            <children xmi:type="notation:ListCompartment" xmi:id="_nESSjE2LEeS6M6K946MBzQ" visible="false" type="Extension_Points"/>
+            <element xmi:type="uml:UseCase" href="platform:/resource/cccc/analyse.emx#_Nn9BwEfAEeSdvZkOkktufQ?analyse/Générer%20un%20jeu%20de%20pages%20HTML?"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSjU2LEeS6M6K946MBzQ" x="10270" y="212"/>
+          </children>
+          <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_nESSjk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="notation:DecorationNode" xmi:id="_nESSj02LEeS6M6K946MBzQ" type="ImageCompartment">
+              <layoutConstraint xmi:type="notation:Size" xmi:id="_nESSkE2LEeS6M6K946MBzQ" width="2216" height="1322"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSkU2LEeS6M6K946MBzQ" type="Stereotype"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSkk2LEeS6M6K946MBzQ" type="Name"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSk02LEeS6M6K946MBzQ" type="Parent"/>
+            <children xmi:type="notation:ListCompartment" xmi:id="_nESSlE2LEeS6M6K946MBzQ" visible="false" type="Extension_Points"/>
+            <element xmi:type="uml:UseCase" href="platform:/resource/cccc/analyse.emx#_arMOkEfAEeSdvZkOkktufQ?analyse/Créer%20un%20enchaînement?"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSlU2LEeS6M6K946MBzQ" x="7762" y="6416"/>
+          </children>
+          <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_nESSlk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="notation:DecorationNode" xmi:id="_nESSl02LEeS6M6K946MBzQ" type="ImageCompartment">
+              <layoutConstraint xmi:type="notation:Size" xmi:id="_nESSmE2LEeS6M6K946MBzQ" width="2216" height="1322"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSmU2LEeS6M6K946MBzQ" type="Stereotype"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSmk2LEeS6M6K946MBzQ" type="Name"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSm02LEeS6M6K946MBzQ" type="Parent"/>
+            <children xmi:type="notation:ListCompartment" xmi:id="_nESSnE2LEeS6M6K946MBzQ" visible="false" type="Extension_Points"/>
+            <element xmi:type="uml:UseCase" href="platform:/resource/cccc/analyse.emx#_bZTRwEfAEeSdvZkOkktufQ?analyse/Créer%20une%20section?"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSnU2LEeS6M6K946MBzQ" x="11326" y="6416"/>
+          </children>
+          <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_nESSnk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="notation:DecorationNode" xmi:id="_nESSn02LEeS6M6K946MBzQ" type="ImageCompartment">
+              <layoutConstraint xmi:type="notation:Size" xmi:id="_nESSoE2LEeS6M6K946MBzQ" width="2216" height="1322"/>
+            </children>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSoU2LEeS6M6K946MBzQ" type="Stereotype"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSok2LEeS6M6K946MBzQ" type="Name"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSo02LEeS6M6K946MBzQ" type="Parent"/>
+            <children xmi:type="notation:ListCompartment" xmi:id="_nESSpE2LEeS6M6K946MBzQ" visible="false" type="Extension_Points"/>
+            <element xmi:type="uml:UseCase" href="platform:/resource/cccc/analyse.emx#_GUe8wEv1EeSRvY3T7XWeKw?analyse/Ajouter%20un%20objet?"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSpU2LEeS6M6K946MBzQ" x="4726" y="6284"/>
+          </children>
+        </children>
+        <element xmi:type="uml:Component" href="platform:/resource/cccc/analyse.emx#_fjczcEe_EeSdvZkOkktufQ?analyse/Logiciel%20de%20création%20de%20LDVH?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSpk2LEeS6M6K946MBzQ" x="5544" y="792" width="15261" height="10683"/>
+      </children>
+      <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_nESSp02LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" fillColor="15912618" transparency="0" lineColor="15912618" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESSqE2LEeS6M6K946MBzQ" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_nESSqU2LEeS6M6K946MBzQ" width="1455" height="2381"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSqk2LEeS6M6K946MBzQ" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSq02LEeS6M6K946MBzQ" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSrE2LEeS6M6K946MBzQ" type="Parent"/>
+        <element xmi:type="uml:Actor" href="platform:/resource/cccc/analyse.emx#_i_FM0Ee_EeSdvZkOkktufQ?analyse/Auteur?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSrU2LEeS6M6K946MBzQ" x="1848" y="1320"/>
+      </children>
+      <element xsi:nil="true"/>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nESSrk2LEeS6M6K946MBzQ" source="_nESShk2LEeS6M6K946MBzQ" target="_nESSdk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESSr02LEeS6M6K946MBzQ" type="KindLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSsE2LEeS6M6K946MBzQ" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSsU2LEeS6M6K946MBzQ" type="Kind"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSsk2LEeS6M6K946MBzQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSs02LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <element xmi:type="uml:Extend" href="platform:/resource/cccc/analyse.emx#_WN2gkEfAEeSdvZkOkktufQ?analyse/Générer%20un%20jeu%20de%20pages%20HTML/%3CExtend%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nESStE2LEeS6M6K946MBzQ" points="[-28, -7, 98, 15]$[-92, -29, 34, -7]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nESStU2LEeS6M6K946MBzQ" source="_nESSfk2LEeS6M6K946MBzQ" target="_nESSdk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESStk2LEeS6M6K946MBzQ" type="KindLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSt02LEeS6M6K946MBzQ" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSuE2LEeS6M6K946MBzQ" type="Kind"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSuU2LEeS6M6K946MBzQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSuk2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <element xmi:type="uml:Extend" href="platform:/resource/cccc/analyse.emx#_ZSVlQEfAEeSdvZkOkktufQ?analyse/Générer%20une%20version%20imprimable/%3CExtend%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nESSu02LEeS6M6K946MBzQ" points="[-12, -7, 124, 75]$[-132, -63, 4, 19]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nESSvE2LEeS6M6K946MBzQ" source="_nESSp02LEeS6M6K946MBzQ" target="_nESSXk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESSvU2LEeS6M6K946MBzQ" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSvk2LEeS6M6K946MBzQ" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSv02LEeS6M6K946MBzQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESSwE2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESSwU2LEeS6M6K946MBzQ" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSwk2LEeS6M6K946MBzQ" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_iT5sYEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESSw02LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESSxE2LEeS6M6K946MBzQ" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSxU2LEeS6M6K946MBzQ" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_iT5sYEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESSxk2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESSx02LEeS6M6K946MBzQ" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSyE2LEeS6M6K946MBzQ" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_iTv7YEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/creer%20un%20nouveau%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESSyU2LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESSyk2LEeS6M6K946MBzQ" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESSy02LEeS6M6K946MBzQ" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_iTv7YEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/creer%20un%20nouveau%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESSzE2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESSzU2LEeS6M6K946MBzQ" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESSzk2LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_iT5sYEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESSz02LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS0E2LEeS6M6K946MBzQ" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESS0U2LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_iTv7YEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/creer%20un%20nouveau%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESS0k2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS002LEeS6M6K946MBzQ" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESS1E2LEeS6M6K946MBzQ" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_iT5sYEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESS1U2LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS1k2LEeS6M6K946MBzQ" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESS102LEeS6M6K946MBzQ" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_iTv7YEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/creer%20un%20nouveau%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESS2E2LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/cccc/analyse.emx#_iTn_kEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nESS2U2LEeS6M6K946MBzQ" points="[18, -7, -81, 34]$[98, -22, -1, 19]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nESS2k2LEeS6M6K946MBzQ" source="_nESSp02LEeS6M6K946MBzQ" target="_nESSZk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS202LEeS6M6K946MBzQ" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESS3E2LEeS6M6K946MBzQ" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESS3U2LEeS6M6K946MBzQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESS3k2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS302LEeS6M6K946MBzQ" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESS4E2LEeS6M6K946MBzQ" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_jCi7EEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESS4U2LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS4k2LEeS6M6K946MBzQ" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESS402LEeS6M6K946MBzQ" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_jCi7EEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESS5E2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS5U2LEeS6M6K946MBzQ" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESS5k2LEeS6M6K946MBzQ" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_jCTDcEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/sauvegarder%20un%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESS502LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS6E2LEeS6M6K946MBzQ" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESS6U2LEeS6M6K946MBzQ" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_jCTDcEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/sauvegarder%20un%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESS6k2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS602LEeS6M6K946MBzQ" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESS7E2LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_jCi7EEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESS7U2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS7k2LEeS6M6K946MBzQ" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESS702LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_jCTDcEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/sauvegarder%20un%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESS8E2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS8U2LEeS6M6K946MBzQ" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESS8k2LEeS6M6K946MBzQ" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_jCi7EEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESS802LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS9E2LEeS6M6K946MBzQ" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESS9U2LEeS6M6K946MBzQ" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_jCTDcEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/sauvegarder%20un%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESS9k2LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/cccc/analyse.emx#_jCOyAEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nESS902LEeS6M6K946MBzQ" points="[21, 3, -77, -16]$[62, 13, -36, -6]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nESS-E2LEeS6M6K946MBzQ" source="_nESSp02LEeS6M6K946MBzQ" target="_nESSZk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS-U2LEeS6M6K946MBzQ" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESS-k2LEeS6M6K946MBzQ" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESS-02LEeS6M6K946MBzQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESS_E2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESS_U2LEeS6M6K946MBzQ" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESS_k2LEeS6M6K946MBzQ" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_kpYWAEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESS_02LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTAE2LEeS6M6K946MBzQ" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTAU2LEeS6M6K946MBzQ" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_kpYWAEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTAk2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTA02LEeS6M6K946MBzQ" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTBE2LEeS6M6K946MBzQ" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_kpSPYEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/sauvegarder%20un%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTBU2LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTBk2LEeS6M6K946MBzQ" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTB02LEeS6M6K946MBzQ" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_kpSPYEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/sauvegarder%20un%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTCE2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTCU2LEeS6M6K946MBzQ" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESTCk2LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_kpYWAEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTC02LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTDE2LEeS6M6K946MBzQ" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESTDU2LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_kpSPYEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/sauvegarder%20un%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTDk2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTD02LEeS6M6K946MBzQ" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESTEE2LEeS6M6K946MBzQ" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_kpYWAEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTEU2LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTEk2LEeS6M6K946MBzQ" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESTE02LEeS6M6K946MBzQ" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_kpSPYEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/sauvegarder%20un%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTFE2LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/cccc/analyse.emx#_kpN98EfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nESTFU2LEeS6M6K946MBzQ" points="[21, 5, -77, -14]$[60, 18, -38, -1]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nESTFk2LEeS6M6K946MBzQ" source="_nESSp02LEeS6M6K946MBzQ" target="_nESSbk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTF02LEeS6M6K946MBzQ" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTGE2LEeS6M6K946MBzQ" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTGU2LEeS6M6K946MBzQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESTGk2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTG02LEeS6M6K946MBzQ" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTHE2LEeS6M6K946MBzQ" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_nW99oEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTHU2LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTHk2LEeS6M6K946MBzQ" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTH02LEeS6M6K946MBzQ" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_nW99oEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTIE2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTIU2LEeS6M6K946MBzQ" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTIk2LEeS6M6K946MBzQ" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_nW5sMEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/charger%20un%20livre%20existant?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTI02LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTJE2LEeS6M6K946MBzQ" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTJU2LEeS6M6K946MBzQ" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_nW5sMEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/charger%20un%20livre%20existant?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTJk2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTJ02LEeS6M6K946MBzQ" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESTKE2LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_nW99oEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTKU2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTKk2LEeS6M6K946MBzQ" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESTK02LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_nW5sMEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/charger%20un%20livre%20existant?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTLE2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTLU2LEeS6M6K946MBzQ" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESTLk2LEeS6M6K946MBzQ" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_nW99oEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTL02LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTME2LEeS6M6K946MBzQ" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESTMU2LEeS6M6K946MBzQ" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_nW5sMEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/charger%20un%20livre%20existant?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTMk2LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/cccc/analyse.emx#_nW3P8EfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nESTM02LEeS6M6K946MBzQ" points="[12, 9, -134, -91]$[97, 97, -49, -3]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nESTNE2LEeS6M6K946MBzQ" source="_nESSp02LEeS6M6K946MBzQ" target="_nESSlk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTNU2LEeS6M6K946MBzQ" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTNk2LEeS6M6K946MBzQ" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTN02LEeS6M6K946MBzQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESTOE2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTOU2LEeS6M6K946MBzQ" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTOk2LEeS6M6K946MBzQ" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_qwYJcEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTO02LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTPE2LEeS6M6K946MBzQ" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTPU2LEeS6M6K946MBzQ" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_qwYJcEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTPk2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTP02LEeS6M6K946MBzQ" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTQE2LEeS6M6K946MBzQ" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_qwSC0EfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/créer%20une%20section?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTQU2LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTQk2LEeS6M6K946MBzQ" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTQ02LEeS6M6K946MBzQ" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_qwSC0EfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/créer%20une%20section?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTRE2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTRU2LEeS6M6K946MBzQ" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESTRk2LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_qwYJcEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTR02LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTSE2LEeS6M6K946MBzQ" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESTSU2LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_qwSC0EfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/créer%20une%20section?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTSk2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTS02LEeS6M6K946MBzQ" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESTTE2LEeS6M6K946MBzQ" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_qwYJcEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTTU2LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTTk2LEeS6M6K946MBzQ" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESTT02LEeS6M6K946MBzQ" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_qwSC0EfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/créer%20une%20section?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTUE2LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/cccc/analyse.emx#_qwPmkEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nESTUU2LEeS6M6K946MBzQ" points="[22, 9, -292, -116]$[265, 128, -49, 3]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nESTUk2LEeS6M6K946MBzQ" source="_nESSp02LEeS6M6K946MBzQ" target="_nESSjk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTU02LEeS6M6K946MBzQ" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTVE2LEeS6M6K946MBzQ" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTVU2LEeS6M6K946MBzQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESTVk2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTV02LEeS6M6K946MBzQ" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTWE2LEeS6M6K946MBzQ" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_rjIcEEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTWU2LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTWk2LEeS6M6K946MBzQ" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTW02LEeS6M6K946MBzQ" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_rjIcEEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTXE2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTXU2LEeS6M6K946MBzQ" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTXk2LEeS6M6K946MBzQ" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_rjEKoEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/créer%20un%20enchaînement?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTX02LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTYE2LEeS6M6K946MBzQ" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTYU2LEeS6M6K946MBzQ" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_rjEKoEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/créer%20un%20enchaînement?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTYk2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTY02LEeS6M6K946MBzQ" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESTZE2LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_rjIcEEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTZU2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTZk2LEeS6M6K946MBzQ" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESTZ02LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_rjEKoEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/créer%20un%20enchaînement?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTaE2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTaU2LEeS6M6K946MBzQ" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESTak2LEeS6M6K946MBzQ" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_rjIcEEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTa02LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTbE2LEeS6M6K946MBzQ" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESTbU2LEeS6M6K946MBzQ" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_rjEKoEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/créer%20un%20enchaînement?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTbk2LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/cccc/analyse.emx#_rjBuYEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nESTb02LEeS6M6K946MBzQ" points="[28, 8, -425, -117]$[502, 129, 49, 4]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nESTcE2LEeS6M6K946MBzQ" source="_nESSp02LEeS6M6K946MBzQ" target="_nESSdk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTcU2LEeS6M6K946MBzQ" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTck2LEeS6M6K946MBzQ" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTc02LEeS6M6K946MBzQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESTdE2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTdU2LEeS6M6K946MBzQ" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTdk2LEeS6M6K946MBzQ" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_suZ8YEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTd02LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTeE2LEeS6M6K946MBzQ" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTeU2LEeS6M6K946MBzQ" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_suZ8YEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTek2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTe02LEeS6M6K946MBzQ" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTfE2LEeS6M6K946MBzQ" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_suVq8EfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/générer%20un%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTfU2LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTfk2LEeS6M6K946MBzQ" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTf02LEeS6M6K946MBzQ" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_suVq8EfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/générer%20un%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTgE2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTgU2LEeS6M6K946MBzQ" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESTgk2LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_suZ8YEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTg02LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESThE2LEeS6M6K946MBzQ" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESThU2LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_suVq8EfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/générer%20un%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESThk2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTh02LEeS6M6K946MBzQ" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESTiE2LEeS6M6K946MBzQ" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_suZ8YEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTiU2LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTik2LEeS6M6K946MBzQ" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESTi02LEeS6M6K946MBzQ" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_suVq8EfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E/générer%20un%20livre?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTjE2LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/cccc/analyse.emx#_suTOsEfAEeSdvZkOkktufQ?analyse/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nESTjU2LEeS6M6K946MBzQ" points="[28, -6, -263, 49]$[244, -62, -47, -7]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_nESTjk2LEeS6M6K946MBzQ" source="_nESSp02LEeS6M6K946MBzQ" target="_nESSnk2LEeS6M6K946MBzQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTj02LEeS6M6K946MBzQ" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTkE2LEeS6M6K946MBzQ" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTkU2LEeS6M6K946MBzQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nESTkk2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTk02LEeS6M6K946MBzQ" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTlE2LEeS6M6K946MBzQ" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_OBZlIEv1EeSRvY3T7XWeKw?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTlU2LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTlk2LEeS6M6K946MBzQ" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTl02LEeS6M6K946MBzQ" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_OBZlIEv1EeSRvY3T7XWeKw?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTmE2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTmU2LEeS6M6K946MBzQ" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTmk2LEeS6M6K946MBzQ" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_OBMw0Ev1EeSRvY3T7XWeKw?analyse/%3CAssociation%3E/ajouter%20un%20objet?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTm02LEeS6M6K946MBzQ" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTnE2LEeS6M6K946MBzQ" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_nESTnU2LEeS6M6K946MBzQ" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_OBMw0Ev1EeSRvY3T7XWeKw?analyse/%3CAssociation%3E/ajouter%20un%20objet?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTnk2LEeS6M6K946MBzQ" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTn02LEeS6M6K946MBzQ" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESToE2LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_OBZlIEv1EeSRvY3T7XWeKw?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESToU2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTok2LEeS6M6K946MBzQ" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_nESTo02LEeS6M6K946MBzQ" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_OBMw0Ev1EeSRvY3T7XWeKw?analyse/%3CAssociation%3E/ajouter%20un%20objet?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTpE2LEeS6M6K946MBzQ" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTpU2LEeS6M6K946MBzQ" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESTpk2LEeS6M6K946MBzQ" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_OBZlIEv1EeSRvY3T7XWeKw?analyse/%3CAssociation%3E/auteur?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTp02LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_nESTqE2LEeS6M6K946MBzQ" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_nESTqU2LEeS6M6K946MBzQ" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/cccc/analyse.emx#_OBMw0Ev1EeSRvY3T7XWeKw?analyse/%3CAssociation%3E/ajouter%20un%20objet?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nESTqk2LEeS6M6K946MBzQ" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/cccc/analyse.emx#_OBH4UEv1EeSRvY3T7XWeKw?analyse/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nESTq02LEeS6M6K946MBzQ" points="[20, 9, -303, -141]$[317, 175, -6, 25]"/>
       </edges>
     </contents>
   </eAnnotations>
