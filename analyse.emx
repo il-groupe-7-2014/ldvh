@@ -917,7 +917,11 @@
     <packagedElement xmi:type="uml:Association" xmi:id="_S7w2AEfGEeSpms1M6EAlWQ" memberEnd="_S7yEIEfGEeSpms1M6EAlWQ _S71HcEfGEeSpms1M6EAlWQ"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_Xvd1kEfGEeSpms1M6EAlWQ" memberEnd="_XvfDsEfGEeSpms1M6EAlWQ _XvgR0kfGEeSpms1M6EAlWQ"/>
     <packagedElement xmi:type="uml:Component" xmi:id="_MGORgE4cEeSmXfXBjxcSxg" name="Logiciel de création de LDVH" useCase="_LVhNUE4cEeSmXfXBjxcSxg _W0CfEE4cEeSmXfXBjxcSxg _XGAY0E4cEeSmXfXBjxcSxg _dllrYE4cEeSmXfXBjxcSxg _BPYGkFK4EeSIXPiA5ZB13g _C0fqQFK4EeSIXPiA5ZB13g _IZb5gFK4EeSIXPiA5ZB13g _aFGC8FK4EeSIXPiA5ZB13g _indsoFK4EeSIXPiA5ZB13g _mJK40FK4EeSIXPiA5ZB13g">
-      <ownedUseCase xmi:id="_W0CfEE4cEeSmXfXBjxcSxg" name="Charger un livre" subject="_MGORgE4cEeSmXfXBjxcSxg"/>
+      <ownedUseCase xmi:id="_W0CfEE4cEeSmXfXBjxcSxg" name="Charger un livre" subject="_MGORgE4cEeSmXfXBjxcSxg">
+        <ownedComment xmi:id="_5PZJgFK9EeSC4NOzTJXAVA" annotatedElement="_W0CfEE4cEeSmXfXBjxcSxg">
+          <body>&lt;p>&lt;u>Identification&lt;/u>&lt;/p>&lt;p>Nom du cas: &quot;Charger un livre&quot;&lt;/p>&lt;p>But: décrire les étapes permettant à l'auteur de charger un livre via le logiciel&lt;/p>&lt;p>Acteur: auteur&lt;/p>&lt;p>Date de création: 06/10/14&lt;/p>&lt;p>Date de modification: 06/10/14&lt;/p>&lt;p>Responsable: M. PEREZ&lt;/p>&lt;p>Version: 1.0&lt;/p>&lt;p>&lt;u>Séquencement&lt;/u>&lt;/p>&lt;p>Le cas d'utilisation commence lorsque l'auteur clique sur le bouton &quot;Charger un livre&quot;.&lt;/p>&lt;p>Pré-conditions&lt;/p>&lt;p>Au moins un livre a déjà été sauvegarder par le système.&lt;/p>&lt;p>Enchaînement nominal&lt;/p>&lt;p>1. L'auteur sélectionne le livre de son choix dans l'explorateur de fichiers.&lt;/p>&lt;p>2. Le système affiche un message demandant la confirmation à l'auteur.&lt;/p>&lt;p>3. L'auteur confirme l'ouverture du livre.&lt;/p>&lt;p>Enchaînement d'exception&lt;/p>&lt;p>E1: L'auteur annule l'opération&lt;/p>&lt;p>L'enchaînement démarre à n'importe quel point où l'auteur à la main.&lt;/p>&lt;p>E2: Le livre est endommagé&lt;/p>&lt;p>L'enchaînement démarre après le point 1. de la séquence nominal.&lt;/p>&lt;p>2. Le système affiche un message indiquant à l'auteur que le livre est endommagé et propose à l'utilisateur d'en ouvrir un autre.&lt;/p>&lt;p>E3: Le livre a été supprimé pendant l'opération&lt;/p>&lt;p>L'enchaînement démarre après le point 1. de la séquence nominal.&lt;/p>&lt;p>2. Le système affiche un message indiquant à l'auteur que le livre a été supprimé ou n'existe pas et propose à l'utilisateur d'en ouvrir un autre.&lt;/p>&lt;p>Post-conditions&lt;/p>&lt;p>Le système a charger le livre sélectionner par l'auteur dans l'interface graphique.&lt;/p></body>
+        </ownedComment>
+      </ownedUseCase>
       <ownedUseCase xmi:id="_LVhNUE4cEeSmXfXBjxcSxg" name="Créer un livre" subject="_MGORgE4cEeSmXfXBjxcSxg"/>
       <ownedUseCase xmi:id="_dllrYE4cEeSmXfXBjxcSxg" name="Générer un livre" subject="_MGORgE4cEeSmXfXBjxcSxg">
         <ownedComment xmi:id="_qZvx8FFfEeSu_oF8FnkU0A" annotatedElement="_dllrYE4cEeSmXfXBjxcSxg">
@@ -932,9 +936,21 @@
           <body>&lt;p>&lt;u>Identification&lt;/u>&lt;/p>&lt;p>Identifiant : 7&lt;/p>&lt;p>Nom du cas : Supprimer une section&lt;/p>&lt;p>Description : L'auteur veut supprimer une section d'un livre.&lt;/p>&lt;p>Acteur principal : Auteur&lt;/p>&lt;p>Date de création : le 12/10/2014&lt;/p>&lt;p>Date de mise à jour : le 12/10/2014&lt;/p>&lt;p>Responsable : Stéphane Meresse&lt;/p>&lt;p>Version : 1.0&lt;/p>&lt;p>&lt;u>Séquencement&lt;/u>&lt;/p>&lt;p>Pré-conditions :&lt;/p>&lt;p>Le livre doit contenir au moins une section.&lt;/p>&lt;p>Enchaînement nominal :&lt;/p>&lt;p>1. L'auteur sélectionne la section qu'il souhaite supprimer du livre.&lt;/p>&lt;p>2. Le système affiche les différentes actions que peut effectuer l'auteur sur cette section.&lt;/p>&lt;p>3. L'auteur choisit de supprimer la section.&lt;/p>&lt;p>4. Le système affiche une fenêtre de confirmation, demandant à l'auteur s'il souhaite vraiment supprimer cette section.&lt;/p>&lt;p>5. L'auteur confirme.&lt;/p>&lt;p>6. Le système supprime la section du livre.&lt;/p>&lt;p>Enchaînements d'exception :&lt;/p>&lt;p>E1 : L'auteur annule la suppression de la section.&lt;/p>&lt;p>L'enchaînement démarre au point 4 de la séquence nominale :&lt;/p>&lt;p>        4. Le système affiche son interface usuelle (le graphe correspondant au livre).&lt;/p>&lt;p>E2 : L'auteur choisit d'effectuer une autre action sur la section.&lt;/p>&lt;p>L'enchaînement démarre au point 2 de la séquence nominale :&lt;/p>&lt;p>        Réalisation d'un autre cas d'utilisation correspondant à une action que peut effectuer l'auteur sur une section.&lt;/p>&lt;p>Post-conditions :&lt;/p>&lt;p>Le système a supprimé du livre : &lt;/p>&lt;p>        - la section&lt;/p>&lt;p>        - les enchaînements associés&lt;/p>&lt;p>Le système a ensuite analysé le graphe afin de détecter si des sections étaient devenues inatteignables, suite à cette action.&lt;/p></body>
         </ownedComment>
       </ownedUseCase>
-      <ownedUseCase xmi:id="_IZb5gFK4EeSIXPiA5ZB13g" name="Créer un enchaînement" subject="_MGORgE4cEeSmXfXBjxcSxg"/>
-      <ownedUseCase xmi:id="_aFGC8FK4EeSIXPiA5ZB13g" name="Supprimer un enchaînement" subject="_MGORgE4cEeSmXfXBjxcSxg"/>
-      <ownedUseCase xmi:id="_indsoFK4EeSIXPiA5ZB13g" name="Créer un objet" subject="_MGORgE4cEeSmXfXBjxcSxg"/>
+      <ownedUseCase xmi:id="_IZb5gFK4EeSIXPiA5ZB13g" name="Créer un enchaînement" subject="_MGORgE4cEeSmXfXBjxcSxg">
+        <ownedComment xmi:id="_BP1x4FK-EeSC4NOzTJXAVA" annotatedElement="_IZb5gFK4EeSIXPiA5ZB13g">
+          <body>&lt;p>&lt;u>Identification&lt;/u>&lt;/p>&lt;p>Nom du cas: &quot;Créer un enchaînement&quot;&lt;/p>&lt;p>But: décrire les étapes permettant à l'auteur de créer un enchaînement via le logiciel&lt;/p>&lt;p>Acteur: auteur&lt;/p>&lt;p>Date de création: 12/10/14&lt;/p>&lt;p>Date de modification: 12/10/14&lt;/p>&lt;p>Responsable: M. PEREZ&lt;/p>&lt;p>Version: 1.0&lt;/p>&lt;p>&lt;u>Séquencement&lt;/u>&lt;/p>&lt;p>Le cas d'utilisation commence lorsque l'auteur clique sur le bouton &quot;Créer un enchaînement&quot;.&lt;/p>&lt;p>Pré-conditions&lt;/p>&lt;p>Aucune.&lt;/p>&lt;p>Enchaînement nominal&lt;/p>&lt;p>1. L'auteur renseigne le nom de l'enchaînement et les prérequis dans les champs prévus à cet effet.&lt;/p>&lt;p>2. Le système affiche la confirmation.&lt;/p>&lt;p>3. L'auteur confirme la création de l'enchaînement.&lt;/p>&lt;p>Enchaînement alternatif&lt;/p>&lt;p>A1 : Un enchaînement ayant le même nom a déjà été créer.&lt;/p>&lt;p>L'enchaînement démarre après le point 1 de la séquence nominale :&lt;/p>&lt;p>2. Le système affiche dans une boîte de dialogue que le nom est déjà pris pour un enchaînement et invite l'auteur à modifier le champ prévu à cet effet.&lt;/p>&lt;p>Enchaînements d'exception&lt;/p>&lt;p>E1 : L'auteur annule l'opération&lt;/p>&lt;p>L'enchaînement démarre à n'importe quel point où l'auteur à la main.&lt;/p>&lt;p>Le système ferme la fenêtre de création d'enchaînement.&lt;/p>&lt;p>E2 : La création de l'enchaînement a échoué&lt;/p>&lt;p>L'enchaînement démarre après le point 3. de la séquence nominal.&lt;/p>&lt;p>4. Le système affiche un message indiquant à l'auteur que la création de l'enchaînement a échoué et lui propose d'en crer un autre.&lt;/p>&lt;p>Post-conditions&lt;/p>&lt;p>Le système a ajouter l'enchaînement créer par l'auteur par l'auteur dans l'interface graphique.&lt;/p></body>
+        </ownedComment>
+      </ownedUseCase>
+      <ownedUseCase xmi:id="_aFGC8FK4EeSIXPiA5ZB13g" name="Supprimer un enchaînement" subject="_MGORgE4cEeSmXfXBjxcSxg">
+        <ownedComment xmi:id="_ORgRYFK-EeSC4NOzTJXAVA" annotatedElement="_aFGC8FK4EeSIXPiA5ZB13g">
+          <body>&lt;p>&lt;u>Identification&lt;/u>&lt;/p>&lt;p>Nom du cas: &quot;Supprimer un enchaînement&quot;&lt;/p>&lt;p>But: décrire les étapes permettant à l'auteur de supprimerun enchaînement via le logiciel&lt;/p>&lt;p>Acteur: auteur&lt;/p>&lt;p>Date de création: 12/10/14&lt;/p>&lt;p>Date de modification: 12/10/14&lt;/p>&lt;p>Responsable: M. PEREZ&lt;/p>&lt;p>Version: 1.0&lt;/p>&lt;p>&lt;u>Séquencement&lt;/u>&lt;/p>&lt;p>Le cas d'utilisation commence lorsque l'auteur clique sur le bouton &quot;Supprimer&quot; accessible dans un menu déroulant s'affichant lors d'un clique droit sur un enchaînement donné.&lt;/p>&lt;p>Pré-conditions&lt;/p>&lt;p>Au moins un enchaînement a déjà été créer.&lt;/p>&lt;p>Enchaînement nominal&lt;/p>&lt;p>1. L'auteur envoit au système une demande de suppression sur l'enchaînement de son choix .&lt;/p>&lt;p>2. Le système affiche une fenêtre de confirmation.&lt;/p>&lt;p>3. L'auteur confirme la suppression de l'enchaînement.&lt;/p>&lt;p>Enchaînements d'exception&lt;/p>&lt;p>E1 : L'auteur annule l'opération&lt;/p>&lt;p>L'enchaînement démarre à partir du point 2 de l'enchaînement nominal.&lt;/p>&lt;p>3. L'auteur clique sur le bouton &quot;Annuler&quot; de la fenêtre de confirmation.&lt;/p>&lt;p>E2 : La suppression de l'enchaînement a échoué&lt;/p>&lt;p>L'enchaînement démarre après le point 3. de la séquence nominal.&lt;/p>&lt;p>4. Le système affiche un message indiquant à l'auteur que la suppression de l'enchaînement a échoué et lui propose de réessayer.&lt;/p>&lt;p>Post-conditions&lt;/p>&lt;p>Le système a supprimer l'enchaînement qui n'apparait donc plus dans l'interface graphique.&lt;/p></body>
+        </ownedComment>
+      </ownedUseCase>
+      <ownedUseCase xmi:id="_indsoFK4EeSIXPiA5ZB13g" name="Créer un objet" subject="_MGORgE4cEeSmXfXBjxcSxg">
+        <ownedComment xmi:id="_qvVj8FK-EeSC4NOzTJXAVA" annotatedElement="_indsoFK4EeSIXPiA5ZB13g">
+          <body>&lt;p>&lt;u>Identification&lt;/u>&lt;/p>&lt;p>Nom du cas : “Créer un objet”&lt;/p>&lt;p>But : création d’un objet lors de la conception d’un livre dont vous êtes le héros&lt;/p>&lt;p>Acteur principal : utilisateur&lt;/p>&lt;p>Acteur secondaire : néant&lt;/p>&lt;p>Date de création : le 12/10/2014&lt;/p>&lt;p>Date de mise à jour : le 12/10/2014&lt;/p>&lt;p>Responsable : Elliott Muenier&lt;/p>&lt;p>Version 1.1&lt;/p>&lt;p>&lt;u>Séquencement&lt;/u>&lt;/p>&lt;p>Le cas d’utilisation commence lorsque l’utilisateur appuie sur le bouton de la fonctionnalité.&lt;/p>&lt;p>Pré-conditions&lt;/p>&lt;p>l’utilisateur doit avoir préalablement créé ou chargé un livre&lt;/p>&lt;p>Enchaînement nominal&lt;/p>&lt;p>1. l’utilisateur appuie sur le bouton de la fonctionnalité&lt;/p>&lt;p>2. le système affiche la fenêtre de création d’objet&lt;/p>&lt;p>3. l’utilisateur entre le nom d’un objet&lt;/p>&lt;p>4. le système vérifie qu’un des objets du livre (s’il en existe déjà) ne porte pas le même nom&lt;/p>&lt;p>5. l’utilisateur sélectionne à l’aide d’une liste les enchaînements et les sections qui utiliseront l’objet&lt;/p>&lt;p>6. le système analyse le graphe&lt;/p>&lt;p>7. l’utilisateur quitte l’assistant de création d’objet&lt;/p>&lt;p>Enchaînement alternatifs&lt;/p>&lt;p>A1 : le système détecte que le nom de l’objet est le même qu’un autre existant&lt;/p>&lt;p>L’enchaînement démarre après le point 4 de la séquence nominale : &lt;/p>&lt;p>4. Le système indique à l’utilisateur que le nom existe déjà et qu’il doit le modifier&lt;/p>&lt;p>La séquence nominale reprend à l’étape 3.&lt;/p>&lt;p>A2 : le système détecte que le graphe contient des erreurs&lt;/p>&lt;p>l’enchaînement démarre après le point 6 de l’enchaînement nominale :&lt;/p>&lt;p>7. le système indique que le graphe contient des erreurs d’enchaînement et invite l’utilisateur à changer son choix.&lt;/p>&lt;p>la séquence nominale reprend au point 7.&lt;/p>&lt;p>Post-conditions :&lt;/p>&lt;p>Le système a créé un nouvel objet.&lt;/p></body>
+        </ownedComment>
+      </ownedUseCase>
       <ownedUseCase xmi:id="_mJK40FK4EeSIXPiA5ZB13g" name="Supprimer un objet" subject="_MGORgE4cEeSmXfXBjxcSxg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_gzdgIE4dEeSmXfXBjxcSxg" name="Modifier le livre">
@@ -1055,6 +1071,117 @@
         <message xmi:id="__obckFFnEeSBd703HYNiLg" name="genererPagesHTML" receiveEvent="__od40FFnEeSBd703HYNiLg" sendEvent="__ocqsFFnEeSBd703HYNiLg" connector="_tR_isFFlEeSu_oF8FnkU0A"/>
         <message xmi:id="__og8IFFnEeSBd703HYNiLg" name="genererPagesHTML" messageSort="reply" receiveEvent="__oiKQFFnEeSBd703HYNiLg" sendEvent="__ofuAFFnEeSBd703HYNiLg" connector="_tR_isFFlEeSu_oF8FnkU0A"/>
       </ownedBehavior>
+      <ownedBehavior xmi:type="uml:Interaction" xmi:id="_iTm1IFK7EeSC4NOzTJXAVA" name="Supprimer une section">
+        <eAnnotations xmi:id="_iUMD8FK7EeSC4NOzTJXAVA" source="uml2.diagrams">
+          <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_iUMD8VK7EeSC4NOzTJXAVA" type="Sequence" element="_iTm1IFK7EeSC4NOzTJXAVA" name="DiagrammeSéquence (cas nominal)" measurementUnit="Himetric">
+            <children xmi:type="umlnotation:UMLShape" xmi:id="_iUMD8lK7EeSC4NOzTJXAVA" element="_iTm1IFK7EeSC4NOzTJXAVA" fontName="Ubuntu" fontHeight="8" fillColor="16250871" transparency="0" lineColor="12632258" lineWidth="1" showStereotype="Label">
+              <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_iUMD81K7EeSC4NOzTJXAVA" type="interaction_compartment">
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_R925QFK8EeSC4NOzTJXAVA" element="_R9wLkFK8EeSC4NOzTJXAVA" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_R94HYFK8EeSC4NOzTJXAVA" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_R94HYVK8EeSC4NOzTJXAVA" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_R94ucFK8EeSC4NOzTJXAVA" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_R958kFK8EeSC4NOzTJXAVA" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_R96joFK8EeSC4NOzTJXAVA" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R925QVK8EeSC4NOzTJXAVA" x="4436" y="132" width="2883" height="10742"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_SrsPoFK8EeSC4NOzTJXAVA" element="_SrmwEFK8EeSC4NOzTJXAVA" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <eAnnotations xmi:id="_SrtdwFK8EeSC4NOzTJXAVA" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                    <details xmi:id="_SrtdwVK8EeSC4NOzTJXAVA" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                  </eAnnotations>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_SruE0FK8EeSC4NOzTJXAVA" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_Srur4FK8EeSC4NOzTJXAVA" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_SryWQFK8EeSC4NOzTJXAVA" type="Parent"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SrsPoVK8EeSC4NOzTJXAVA" x="5169" y="132" width="3306" height="10609"/>
+                </children>
+              </children>
+              <children xmi:type="notation:BasicDecorationNode" xmi:id="_iUMD9FK7EeSC4NOzTJXAVA" type="Name"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iUMD9VK7EeSC4NOzTJXAVA" x="793" y="793"/>
+            </children>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_OCurAFK9EeSC4NOzTJXAVA" element="_OBtXUFK9EeSC4NOzTJXAVA" source="_SrsPoFK8EeSC4NOzTJXAVA" target="_SrsPoFK8EeSC4NOzTJXAVA" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_OCv5IFK9EeSC4NOzTJXAVA" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_OCwgMFK9EeSC4NOzTJXAVA" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_OCxHQFK9EeSC4NOzTJXAVA" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OCv5IVK9EeSC4NOzTJXAVA" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OCurAVK9EeSC4NOzTJXAVA" points="[0, 0, 0, -55]$[0, 55, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OC8GYFK9EeSC4NOzTJXAVA" id="55:2751"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OC8GYVK9EeSC4NOzTJXAVA" id="231:1455"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_ODNMIFK9EeSC4NOzTJXAVA" element="_OB1TIFK9EeSC4NOzTJXAVA" source="_SrsPoFK8EeSC4NOzTJXAVA" target="_SrsPoFK8EeSC4NOzTJXAVA" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_ODOaQFK9EeSC4NOzTJXAVA" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_ODPBUFK9EeSC4NOzTJXAVA" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_ODPoYFK9EeSC4NOzTJXAVA" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ODOaQVK9EeSC4NOzTJXAVA" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ODNMIVK9EeSC4NOzTJXAVA" points="[0, 0, 0, -10]$[0, 10, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ODQ2gFK9EeSC4NOzTJXAVA" id="232:1322"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ODQ2gVK9EeSC4NOzTJXAVA" id="233:264"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_Z_SjoFK9EeSC4NOzTJXAVA" element="_Z-TFIFK9EeSC4NOzTJXAVA" source="_R925QFK8EeSC4NOzTJXAVA" target="_SrsPoFK8EeSC4NOzTJXAVA" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_Z_TxwFK9EeSC4NOzTJXAVA" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_Z_UY0FK9EeSC4NOzTJXAVA" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_Z_qXEFK9EeSC4NOzTJXAVA" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z_TxwVK9EeSC4NOzTJXAVA" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Z_SjoVK9EeSC4NOzTJXAVA" points="[0, 0, -312, 0]$[312, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z_1WMFK9EeSC4NOzTJXAVA" id="290:1377"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z_1WMVK9EeSC4NOzTJXAVA" id="349:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_aAZ98FK9EeSC4NOzTJXAVA" element="_Z-ZLwFK9EeSC4NOzTJXAVA" source="_SrsPoFK8EeSC4NOzTJXAVA" target="_R925QFK8EeSC4NOzTJXAVA" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_aAbMEFK9EeSC4NOzTJXAVA" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_aAbzIFK9EeSC4NOzTJXAVA" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_aAcaMFK9EeSC4NOzTJXAVA" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aAbMEVK9EeSC4NOzTJXAVA" y="476"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aAZ98VK9EeSC4NOzTJXAVA" points="[0, 0, 312, 0]$[-312, 0, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_aAdoUFK9EeSC4NOzTJXAVA" id="352:1322"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_aAdoUVK9EeSC4NOzTJXAVA" id="353:0"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_fFclIFK9EeSC4NOzTJXAVA" element="_fEXnEFK9EeSC4NOzTJXAVA" source="_SrsPoFK8EeSC4NOzTJXAVA" target="_SrsPoFK8EeSC4NOzTJXAVA" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_fFeaUFK9EeSC4NOzTJXAVA" type="MessageNameLabel">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_fFfBYFK9EeSC4NOzTJXAVA" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_fFfBYVK9EeSC4NOzTJXAVA" type="Name"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fFeaUVK9EeSC4NOzTJXAVA" y="-317"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fFclIVK9EeSC4NOzTJXAVA" points="[0, 0, 0, -48]$[0, 48, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fFoLUFK9EeSC4NOzTJXAVA" id="390:503"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fFoLUVK9EeSC4NOzTJXAVA" id="503:1270"/>
+            </edges>
+          </contents>
+        </eAnnotations>
+        <ownedConnector xmi:id="_OB2hQFK9EeSC4NOzTJXAVA">
+          <end xmi:id="_OB3vYFK9EeSC4NOzTJXAVA" role="_POWI4FFlEeSu_oF8FnkU0A"/>
+          <end xmi:id="_OB4WcFK9EeSC4NOzTJXAVA" role="_POWI4FFlEeSu_oF8FnkU0A"/>
+        </ownedConnector>
+        <ownedConnector xmi:id="_Z-bA8FK9EeSC4NOzTJXAVA">
+          <end xmi:id="_Z-boAFK9EeSC4NOzTJXAVA" role="_POWI4FFlEeSu_oF8FnkU0A"/>
+          <end xmi:id="_Z-boAVK9EeSC4NOzTJXAVA" role="_DDyQgFFlEeSu_oF8FnkU0A"/>
+        </ownedConnector>
+        <lifeline xmi:id="_R9wLkFK8EeSC4NOzTJXAVA" name="auteur" represents="_DDyQgFFlEeSu_oF8FnkU0A" coveredBy="_Z-UTQFK9EeSC4NOzTJXAVA _Z-Zy0FK9EeSC4NOzTJXAVA"/>
+        <lifeline xmi:id="_SrmwEFK8EeSC4NOzTJXAVA" name="systeme" represents="_POWI4FFlEeSu_oF8FnkU0A" coveredBy="_OBvMgFK9EeSC4NOzTJXAVA _OBxBsFK9EeSC4NOzTJXAVA _OBy24FK9EeSC4NOzTJXAVA _OB0sEFK9EeSC4NOzTJXAVA _OB16MFK9EeSC4NOzTJXAVA _Z-VhYFK9EeSC4NOzTJXAVA _Z-WvgFK9EeSC4NOzTJXAVA _Z-X9oFK9EeSC4NOzTJXAVA _fEY1MFK9EeSC4NOzTJXAVA _fEaDUFK9EeSC4NOzTJXAVA _fEbRcFK9EeSC4NOzTJXAVA _fEb4gFK9EeSC4NOzTJXAVA _fEdtsFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Z-UTQFK9EeSC4NOzTJXAVA" covered="_R9wLkFK8EeSC4NOzTJXAVA" event="_dpY20FK9EeSC4NOzTJXAVA" message="_Z-TFIFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Z-VhYFK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" event="_dpZd4FK9EeSC4NOzTJXAVA" message="_Z-TFIFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_Z-WvgFK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" start="_Z-VhYFK9EeSC4NOzTJXAVA" finish="_Z-X9oFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Z-X9oFK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" event="_dpY20FK9EeSC4NOzTJXAVA" message="_Z-ZLwFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Z-Zy0FK9EeSC4NOzTJXAVA" covered="_R9wLkFK8EeSC4NOzTJXAVA" event="_dpZd4FK9EeSC4NOzTJXAVA" message="_Z-ZLwFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fEY1MFK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" event="_hBmv0FK9EeSC4NOzTJXAVA" message="_fEXnEFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fEaDUFK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" event="_hBn98FK9EeSC4NOzTJXAVA" message="_fEXnEFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_fEbRcFK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" start="_fEaDUFK9EeSC4NOzTJXAVA" finish="_fEb4gFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fEb4gFK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" event="_hBmv0FK9EeSC4NOzTJXAVA" message="_fEdGoFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fEdtsFK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" event="_hBn98FK9EeSC4NOzTJXAVA" message="_fEdGoFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OBvMgFK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" event="_P_pDoFK9EeSC4NOzTJXAVA" message="_OBtXUFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OBxBsFK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" event="_P_qRwFK9EeSC4NOzTJXAVA" message="_OBtXUFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_OBy24FK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" start="_OBxBsFK9EeSC4NOzTJXAVA" finish="_OB0sEFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OB0sEFK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" event="_P_pDoFK9EeSC4NOzTJXAVA" message="_OB1TIFK9EeSC4NOzTJXAVA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OB16MFK9EeSC4NOzTJXAVA" covered="_SrmwEFK8EeSC4NOzTJXAVA" event="_P_qRwFK9EeSC4NOzTJXAVA" message="_OB1TIFK9EeSC4NOzTJXAVA"/>
+        <message xmi:id="_OBtXUFK9EeSC4NOzTJXAVA" name="supprimerSection" receiveEvent="_OBxBsFK9EeSC4NOzTJXAVA" sendEvent="_OBvMgFK9EeSC4NOzTJXAVA" connector="_OB2hQFK9EeSC4NOzTJXAVA"/>
+        <message xmi:id="_OB1TIFK9EeSC4NOzTJXAVA" name="supprimerSection" messageSort="reply" receiveEvent="_OB16MFK9EeSC4NOzTJXAVA" sendEvent="_OB0sEFK9EeSC4NOzTJXAVA" connector="_OB2hQFK9EeSC4NOzTJXAVA"/>
+        <message xmi:id="_Z-TFIFK9EeSC4NOzTJXAVA" name="clicSurSection" receiveEvent="_Z-VhYFK9EeSC4NOzTJXAVA" sendEvent="_Z-UTQFK9EeSC4NOzTJXAVA" connector="_Z-bA8FK9EeSC4NOzTJXAVA"/>
+        <message xmi:id="_Z-ZLwFK9EeSC4NOzTJXAVA" name="clicSurSection" messageSort="reply" receiveEvent="_Z-Zy0FK9EeSC4NOzTJXAVA" sendEvent="_Z-X9oFK9EeSC4NOzTJXAVA" connector="_Z-bA8FK9EeSC4NOzTJXAVA"/>
+        <message xmi:id="_fEXnEFK9EeSC4NOzTJXAVA" name="afficherOptionsSurSection" receiveEvent="_fEaDUFK9EeSC4NOzTJXAVA" sendEvent="_fEY1MFK9EeSC4NOzTJXAVA" connector="_OB2hQFK9EeSC4NOzTJXAVA"/>
+        <message xmi:id="_fEdGoFK9EeSC4NOzTJXAVA" name="afficherOptionsSurSection" messageSort="reply" receiveEvent="_fEdtsFK9EeSC4NOzTJXAVA" sendEvent="_fEb4gFK9EeSC4NOzTJXAVA" connector="_OB2hQFK9EeSC4NOzTJXAVA"/>
+      </ownedBehavior>
       <ownedAttribute xmi:id="_DDyQgFFlEeSu_oF8FnkU0A" name="auteur" type="_9jiJcFFjEeSu_oF8FnkU0A"/>
       <ownedAttribute xmi:id="_POWI4FFlEeSu_oF8FnkU0A" name="systeme" type="_OyWJYFFlEeSu_oF8FnkU0A"/>
     </packagedElement>
@@ -1113,6 +1240,9 @@
       <ownedOperation xmi:id="_5PyxcFFlEeSu_oF8FnkU0A" name="clicSurGenerer"/>
       <ownedOperation xmi:id="_trU90FFnEeSBd703HYNiLg" name="afficherTypeGénération"/>
       <ownedOperation xmi:id="_soGJwFFoEeSBd703HYNiLg" name="genererPagesHTML"/>
+      <ownedOperation xmi:id="_P_i9AFK9EeSC4NOzTJXAVA" name="supprimerSection"/>
+      <ownedOperation xmi:id="_dpSwMFK9EeSC4NOzTJXAVA" name="clicSurSection"/>
+      <ownedOperation xmi:id="_hBkTkFK9EeSC4NOzTJXAVA" name="afficherOptionsSurSection"/>
     </packagedElement>
     <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_5P--sFFlEeSu_oF8FnkU0A" name="SendOperationEvent1" operation="_5PyxcFFlEeSu_oF8FnkU0A"/>
     <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_5QG6gFFlEeSu_oF8FnkU0A" name="ReceiveOperationEvent1" operation="_5PyxcFFlEeSu_oF8FnkU0A"/>
@@ -1183,6 +1313,12 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wQ4vsFK4EeSIXPiA5ZB13g" value="1"/>
       </ownedEnd>
     </packagedElement>
+    <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_P_pDoFK9EeSC4NOzTJXAVA" name="SendOperationEvent5" operation="_P_i9AFK9EeSC4NOzTJXAVA"/>
+    <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_P_qRwFK9EeSC4NOzTJXAVA" name="ReceiveOperationEvent5" operation="_P_i9AFK9EeSC4NOzTJXAVA"/>
+    <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_dpY20FK9EeSC4NOzTJXAVA" name="SendOperationEvent6" operation="_dpSwMFK9EeSC4NOzTJXAVA"/>
+    <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_dpZd4FK9EeSC4NOzTJXAVA" name="ReceiveOperationEvent6" operation="_dpSwMFK9EeSC4NOzTJXAVA"/>
+    <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_hBmv0FK9EeSC4NOzTJXAVA" name="SendOperationEvent7" operation="_hBkTkFK9EeSC4NOzTJXAVA"/>
+    <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_hBn98FK9EeSC4NOzTJXAVA" name="ReceiveOperationEvent7" operation="_hBkTkFK9EeSC4NOzTJXAVA"/>
     <profileApplication xmi:id="_4r5_REe3EeSpms1M6EAlWQ">
       <eAnnotations xmi:id="_4r5_RUe3EeSpms1M6EAlWQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
@@ -1205,4 +1341,8 @@
   <Standard:Subsystem xmi:id="_Mu4M8E4cEeSmXfXBjxcSxg" base_Component="_MGORgE4cEeSmXfXBjxcSxg"/>
   <Default:Documentation xmi:id="_qtbi8FFfEeSu_oF8FnkU0A" base_Comment="_qZvx8FFfEeSu_oF8FnkU0A"/>
   <Default:Documentation xmi:id="_banO8FK5EeSIXPiA5ZB13g" base_Comment="_bafTIFK5EeSIXPiA5ZB13g"/>
+  <Default:Documentation xmi:id="_5P3qoFK9EeSC4NOzTJXAVA" base_Comment="_5PZJgFK9EeSC4NOzTJXAVA"/>
+  <Default:Documentation xmi:id="_BP7RcFK-EeSC4NOzTJXAVA" base_Comment="_BP1x4FK-EeSC4NOzTJXAVA"/>
+  <Default:Documentation xmi:id="_ORlw8FK-EeSC4NOzTJXAVA" base_Comment="_ORgRYFK-EeSC4NOzTJXAVA"/>
+  <Default:Documentation xmi:id="_qvbDgFK-EeSC4NOzTJXAVA" base_Comment="_qvVj8FK-EeSC4NOzTJXAVA"/>
 </xmi:XMI>
