@@ -1,0 +1,109 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Documentation UML analyse</title>
+<meta name="generator" content="IBM Rational Model Publisher">
+<meta name="description" content="Sommaire pour Gérer les sections">
+<link rel="stylesheet" type="text/css" href="WebPublish.css">
+</head>
+<body>
+<table class="NavigationBar">
+<tr>
+<td>
+<table class="NavBarLeft">
+<tr>
+<td class="NavBarMainLink"><a target="_top" href="../index.html">Présentation</a></td><td class="NavBarMainLink"><a href="_4.r5_QE.e3E.eS.p.m.s1M6EA.lWQ-top-summary.html">Haut</a></td><td class="NavBarMainLink"><a href="_MGOR.gE4.cE.eS.mX.fXB.j.x.cS.x.g-content.html">Package</a></td><td class="NavBarMainHighlight">Elément</td>
+</tr>
+</table>
+</td><td class="NavBarRight">Documentation UML analyse</td>
+</tr>
+</table>
+<table>
+<tr class="NavBarBookMarks">
+<td class="BookMarkSections"><span class="BookMarkElements">Récapitulatif :</span><span class="BookMarkElements"><a href="#propertiesTable" title="Propriétés">Propriétés</a></span></td><td class="BookMarkSections"></td>
+</tr>
+</table>
+<hr>
+<span class="PackageFullyQualifiedName">Logiciel de création de LDVH</span>
+<br>
+<span class="ElementTitle">Cas d'utilisation Gérer les sections</span>
+<p>
+<a name="documentationSection"></a><p>﻿<b>Créer une section</b></p><p><u>Identification</u></p><p>Identifiant : 5</p><p>Nom du cas : “Créer une section”</p><p>But : création d’une section dans lors de la conception d’un livre dont vous êtes le héro</p><p>Acteur principal : utilisateur</p><p>Acteur secondaire : néant</p><p>Date de création : le 12/10/2014</p><p>Date de mise à jour : le 12/10/2014</p><p>Responsable : Elliott Muenier</p><p>Version 1.1</p><p><u>Séquencement</u></p><p>Le cas d’utilisation commence lorsque l’utilisateur appuie sur le bouton de la fonctionnalité.</p><p>Pré-conditions :</p><blockquote><p>L’utilisateur doit avoir préalablement créé ou chargé un livre</p></blockquote><p>Enchaînement nominal :</p><blockquote><p>1. L’utilisateur appuie sur le bouton de la fonctionnalité</p></blockquote><blockquote><p>2. Le système affiche la fenêtre de création de section</p></blockquote><blockquote><p>3. L’utilisateur sélectionne le type de section qu’il souhaite créer (début, milieu, fin).</p></blockquote><blockquote><p>4. L’utilisateur entre le nom d’une section</p></blockquote><blockquote><p>5. Le système vérifie qu’une des section du livre (s’il en existe déjà) ne porte pas le même nom</p></blockquote><blockquote><p>6. L’utilisateur écrit le texte de la section</p></blockquote><blockquote><p>7. L’utilisateur sélectionne à l’aide d’une liste les objets qui seront utilisés dans la section</p></blockquote><blockquote><p>8. L’utilisateur quitte l’assistant de création de section</p></blockquote><p>Enchaînements alternatifs :</p><p>A1 : le système détecte que le nom de la section est le même qu’une autre existante</p><blockquote><p>L’enchaînement démarre après le point 4 de la séquence nominale :</p></blockquote><blockquote><p>1. Le système indique à l’utilisateur que le nom existe déjà et qu’il doit le modifier</p></blockquote><blockquote><p>La séquence nominale reprend à l’étape 3.</p></blockquote><p>Post-conditions :</p><blockquote><p>Une nouvelle section a été créée par le système.</p></blockquote><p><b>Supprimer une section</b></p><p><u>Identification</u></p><p>Identifiant : 6</p><p>Nom du cas : Supprimer une section</p><p>Description : L'auteur veut supprimer une section d'un livre.</p><p>Acteur principal : Auteur</p><p>Date de création : le 12/10/2014</p><p>Date de mise à jour : le 12/10/2014</p><p>Responsable : Stéphane Meresse</p><p>Version : 1.0</p><p><u>Séquencement</u></p><p>Pré-conditions :</p><blockquote><p>Le livre doit contenir au moins une section.</p></blockquote><p>Enchaînement nominal :</p><blockquote><p>1. L'auteur sélectionne la section qu'il souhaite supprimer du livre.</p></blockquote><blockquote><p>2. Le système affiche les différentes actions que peut effectuer l'auteur sur cette section.</p></blockquote><blockquote><p>3. L'auteur choisit de supprimer la section.</p></blockquote><blockquote><p>4. Le système affiche une fenêtre de confirmation, demandant à l'auteur s'il souhaite vraiment supprimer cette section.</p></blockquote><blockquote><p>5. L'auteur confirme.</p></blockquote><blockquote><p>6. Le système supprime la section du livre.</p></blockquote><p>Enchaînements d'exception :</p><p>E1 : L'auteur annule la suppression de la section.</p><blockquote><p>L'enchaînement démarre après le point 4 de la séquence nominale :</p></blockquote><blockquote><p>5. Le système affiche son interface usuelle (le graphe correspondant au livre).</p></blockquote><p>E2 : L'auteur choisit d'effectuer une autre action sur la section.</p><blockquote><p>L'enchaînement démarre au point 2 de la séquence nominale :</p></blockquote><blockquote><p>Réalisation d'un autre cas d'utilisation correspondant à une action que peut effectuer l'auteur sur une section.</p></blockquote><p>Post-conditions :</p><blockquote><p>Le système a supprimé du livre :</p></blockquote><blockquote><p>- la section</p></blockquote><blockquote><p>- les enchaînements associés</p></blockquote><blockquote><p>Le système a ensuite analysé le graphe afin de détecter si des sections étaient devenues inatteignables, suite à cette action.</p></blockquote><p><b>Modifier une section</b></p><p><u>Identification</u></p><p>Identifiant : 7</p><p>Nom du cas : Modifier une section</p><p>Description : L'auteur veut modifier une section du livre.</p><p>Acteur principal : Auteur</p><p>Date de création : le 15/10/2014</p><p>Date de mise à jour : le 15/10/2014</p><p>Responsable : Christophe Herson</p><p>Version : 1.0</p><p><u>Séquencement</u></p><p>Pré-conditions :</p><blockquote><p>Le livre doit contenir au moins une section.</p></blockquote><p>Enchaînement nominal :</p><blockquote><p>1. L'auteur sélectionne la section qu'il souhaite modifier.</p></blockquote><blockquote><p>2. Le système affiche les différentes actions que peut effectuer l'auteur sur cette section.</p></blockquote><blockquote><p>3. L'auteur choisit de modifier la section.</p></blockquote><blockquote><p>4. L'auteur saisit le nouveau texte et la nouvelle liste d'objets (et s'il le désire le nom de la section car non obligatoire) dans la section.</p></blockquote><blockquote><p>5. L'auteur confirme la modification de la section.</p></blockquote><blockquote><p>6. Le système met à jour la section du livre.</p></blockquote><p>Enchaînements d'exception :</p><blockquote><p>E1 : L'auteur saisit aucun nouveau texte pour la section à modifier.</p></blockquote><blockquote><p>L'enchaînement démarre après le point 4 de la séquence nominale :</p></blockquote><blockquote><p>5. Le système affiche un message indiquant qu'il doit remplir la section à modifier.</p></blockquote><blockquote><p>6. Le système ne met pas à jour la section du livre.</p></blockquote><p>Post-conditions :</p><blockquote><p>Le système a modifié :</p></blockquote><blockquote><p>- la section</p></blockquote><p></p></p>
+<br>
+<a name="propertiesTable">
+<p class="LargeTitle">Propriétés :</p>
+</a>
+<table class="PropertiesTable" cellpadding="4" cellspacing="0" border="1">
+<tr>
+<td class="PropertyName"><b>Alias</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Classifier Behavior</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Abstract</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Leaf</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Mots clés</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name</b></td><td class="PropertyValue">Gérer les sections</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name Expression</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Namespace</b></td><td class="PropertyValue"><a href="_MGOR.gE4.cE.eS.mX.fXB.j.x.cS.x.g-content.html">«subsystem» Logiciel de création de LDVH</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owned Template Signature</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owner</b></td><td class="PropertyValue"><a href="_MGOR.gE4.cE.eS.mX.fXB.j.x.cS.x.g-content.html">«subsystem» Logiciel de création de LDVH</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owning Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Package</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Qualified Name</b></td><td class="PropertyValue">analyse::Logiciel de création de LDVH::Gérer les sections</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Representation</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Stéréotype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Visibility</b></td><td class="PropertyValue">Public</td>
+</tr>
+</table>
+<hr>
+<br>
+<table class="NavigationBar">
+<tr>
+<td>
+<table class="NavBarLeft">
+<tr>
+<td class="NavBarMainLink"><a target="_top" href="../index.html">Présentation</a></td><td class="NavBarMainLink"><a href="_4.r5_QE.e3E.eS.p.m.s1M6EA.lWQ-top-summary.html">Haut</a></td><td class="NavBarMainLink"><a href="_MGOR.gE4.cE.eS.mX.fXB.j.x.cS.x.g-content.html">Package</a></td><td class="NavBarMainHighlight">Elément</td>
+</tr>
+</table>
+</td><td class="NavBarRight">Documentation UML analyse</td>
+</tr>
+</table>
+<table>
+<tr class="NavBarBookMarks">
+<td class="BookMarkSections"><span class="BookMarkElements">Récapitulatif :</span><span class="BookMarkElements"><a href="#propertiesTable" title="Propriétés">Propriétés</a></span></td><td class="BookMarkSections"></td>
+</tr>
+</table>
+</body>
+</html>
