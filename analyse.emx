@@ -720,9 +720,6 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_1DdmAEfEEeSpms1M6EAlWQ" name="Section">
-      <ownedAttribute xmi:id="_ICv6gEfFEeSpms1M6EAlWQ" name="numeroPage" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
       <ownedAttribute xmi:id="_PjGGgEfFEeSpms1M6EAlWQ" name="texte" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
@@ -757,12 +754,12 @@
         </lowerValue>
       </ownedAttribute>
       <ownedAttribute xmi:id="_nEVUwFhDEeSTupmjweToAQ" name="avant" visibility="private" type="_Xcg50EfFEeSpms1M6EAlWQ" association="_nETfkFhDEeSTupmjweToAQ">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nEYYEFhDEeSTupmjweToAQ" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nEXxAFhDEeSTupmjweToAQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nEYYEFhDEeSTupmjweToAQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nEXxAFhDEeSTupmjweToAQ"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_qyRmIFhDEeSTupmjweToAQ" name="apres" visibility="private" type="_Xcg50EfFEeSpms1M6EAlWQ" association="_qyPJ4FhDEeSTupmjweToAQ">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qyUCYFhDEeSTupmjweToAQ" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qyTbUFhDEeSTupmjweToAQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qyUCYFhDEeSTupmjweToAQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qyTbUFhDEeSTupmjweToAQ"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_Xcg50EfFEeSpms1M6EAlWQ" name="Enchainement">
@@ -784,8 +781,8 @@
         </lowerValue>
       </ownedAttribute>
       <ownedAttribute xmi:id="_nEaNQFhDEeSTupmjweToAQ" name="section" visibility="private" type="_1DdmAEfEEeSpms1M6EAlWQ" association="_nETfkFhDEeSTupmjweToAQ">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nEcCcFhDEeSTupmjweToAQ" value="*"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nEbbYFhDEeSTupmjweToAQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nEcCcFhDEeSTupmjweToAQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nEbbYFhDEeSTupmjweToAQ" value="1"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_qyV3kFhDEeSTupmjweToAQ" name="section" visibility="private" type="_1DdmAEfEEeSpms1M6EAlWQ" association="_qyPJ4FhDEeSTupmjweToAQ">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qyYT0FhDEeSTupmjweToAQ" value="1"/>
