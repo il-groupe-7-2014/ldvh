@@ -2820,7 +2820,7 @@
                   <children xmi:type="notation:BasicDecorationNode" xmi:id="_Cf-rNlg8EeSzXLF12-yYcA" type="Stereotype"/>
                   <children xmi:type="notation:BasicDecorationNode" xmi:id="_Cf-rN1g8EeSzXLF12-yYcA" type="Name"/>
                   <children xmi:type="notation:BasicDecorationNode" xmi:id="_Cf-rOFg8EeSzXLF12-yYcA" type="Parent"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf-rOVg8EeSzXLF12-yYcA" x="12852" y="845" width="3253" height="9525"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf-rOVg8EeSzXLF12-yYcA" x="-8664" y="845" width="3253" height="11270"/>
                 </children>
                 <children xmi:type="umlnotation:UMLShape" xmi:id="_Cf-rOlg8EeSzXLF12-yYcA" element="_Cf5LoFg8EeSzXLF12-yYcA" fontName="Cantarell" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
                   <eAnnotations xmi:id="_Cf-rO1g8EeSzXLF12-yYcA" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
@@ -2829,10 +2829,10 @@
                   <children xmi:type="notation:BasicDecorationNode" xmi:id="_Cf-rPVg8EeSzXLF12-yYcA" type="Stereotype"/>
                   <children xmi:type="notation:BasicDecorationNode" xmi:id="_Cf-rPlg8EeSzXLF12-yYcA" type="Name"/>
                   <children xmi:type="notation:BasicDecorationNode" xmi:id="_Cf-rP1g8EeSzXLF12-yYcA" type="Parent"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf-rQFg8EeSzXLF12-yYcA" x="6284" y="-79" width="2856" height="9525"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf-rQFg8EeSzXLF12-yYcA" x="476" y="-79" width="2856" height="11270"/>
                 </children>
                 <children xmi:type="umlnotation:UMLShape" xmi:id="_Cf_SQFg8EeSzXLF12-yYcA" element="_Cf7n4Vg8EeSzXLF12-yYcA" fontName="Cantarell" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf_SQVg8EeSzXLF12-yYcA" x="-1" y="1453" height="-265"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf_SQVg8EeSzXLF12-yYcA" x="-1" y="1322" height="1322"/>
                 </children>
                 <children xmi:type="umlnotation:UMLShape" xmi:id="_Cf_SQlg8EeSzXLF12-yYcA" element="_Cf8O8Vg8EeSzXLF12-yYcA" fontName="Cantarell" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
                   <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_Cf_SQ1g8EeSzXLF12-yYcA" element="_Cf8O8lg8EeSzXLF12-yYcA">
@@ -2851,7 +2851,10 @@
                     <layoutConstraint xmi:type="notation:Size" xmi:id="_Cf_STFg8EeSzXLF12-yYcA" width="1320" height="1320"/>
                   </children>
                   <children xmi:type="notation:BasicDecorationNode" xmi:id="_Cf_STVg8EeSzXLF12-yYcA" type="Stereotype"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf_STlg8EeSzXLF12-yYcA" x="1268" y="264" width="18943" height="5317"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf_STlg8EeSzXLF12-yYcA" x="291" y="264" width="11428" height="5317"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_JV_5AHFwEeSNuqUI8fQlww" element="_Cf7n5Fg8EeSzXLF12-yYcA" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JV_5AXFwEeSNuqUI8fQlww" x="-1" y="1322" height="1322"/>
                 </children>
               </children>
               <children xmi:type="notation:BasicDecorationNode" xmi:id="__N8SsVg7EeSzXLF12-yYcA" type="Name"/>
