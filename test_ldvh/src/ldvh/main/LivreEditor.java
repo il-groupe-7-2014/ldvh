@@ -1,8 +1,8 @@
 package ldvh.main;
-import ihm.graphed.GraphFrame;
-import ihm.graphed.SimpleGraph;
-
 import javax.swing.JFrame;
+
+import ldvh.ihm.graphed.GraphFrame;
+import ldvh.ihm.graphed.SimpleGraph;
 
 public class LivreEditor
 {  
