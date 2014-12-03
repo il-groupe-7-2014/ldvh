@@ -955,7 +955,7 @@
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_oVVsUXlCEeSfL_-HHtgvjQ" type="OperationCompartment"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_oVVsUnlCEeSfL_-HHtgvjQ" visible="false" type="SignalCompartment"/>
           <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_oVWTYHlCEeSfL_-HHtgvjQ" visible="false" type="StructureCompartment"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oVUeMXlCEeSfL_-HHtgvjQ" x="8184" y="1716" width="3381" height="2483"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oVUeMXlCEeSfL_-HHtgvjQ" x="10692" y="1848" width="3381" height="2483"/>
         </children>
         <children xmi:type="umlnotation:UMLShape" xmi:id="_qTKD4HlCEeSfL_-HHtgvjQ" element="_qTCvIHlCEeSfL_-HHtgvjQ" fontName="Cantarell" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
           <children xmi:type="notation:DecorationNode" xmi:id="_qTKq8HlCEeSfL_-HHtgvjQ" type="ImageCompartment">
@@ -1255,7 +1255,7 @@
           </children>
           <children xmi:type="notation:DecorationNode" xmi:id="_4awQsHlCEeSfL_-HHtgvjQ" type="ToRoleLabel" element="_4anGwHlCEeSfL_-HHtgvjQ">
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_4awQsnlCEeSfL_-HHtgvjQ" type="ToRole"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_4awQsXlCEeSfL_-HHtgvjQ" y="-397"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_4awQsXlCEeSfL_-HHtgvjQ" x="399" y="-529"/>
           </children>
           <children xmi:type="notation:DecorationNode" xmi:id="_4awQs3lCEeSfL_-HHtgvjQ" type="FromMultiplicityLabel" element="_4akqgHlCEeSfL_-HHtgvjQ">
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_4aw3wHlCEeSfL_-HHtgvjQ" type="FromMultiplicity"/>
@@ -1263,7 +1263,7 @@
           </children>
           <children xmi:type="notation:DecorationNode" xmi:id="_4aw3wXlCEeSfL_-HHtgvjQ" type="FromRoleLabel" element="_4akqgHlCEeSfL_-HHtgvjQ">
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_4aw3w3lCEeSfL_-HHtgvjQ" type="FromRole"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_4aw3wnlCEeSfL_-HHtgvjQ" y="-397"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_4aw3wnlCEeSfL_-HHtgvjQ" x="-192" y="-529"/>
           </children>
           <children xmi:type="notation:DecorationNode" xmi:id="_4axe0HlCEeSfL_-HHtgvjQ" type="ToQualifierLabel" element="_4anGwHlCEeSfL_-HHtgvjQ">
             <children xmi:type="notation:SemanticListCompartment" xmi:id="_4axe0nlCEeSfL_-HHtgvjQ" type="QualifierCompartment"/>
@@ -1759,14 +1759,94 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bfpcQXsDEeS1R5UmmCBp8w" value="*"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bfpcQHsDEeS1R5UmmCBp8w"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_WMxxQHr_EeS1R5UmmCBp8w" name="supprimerObjet"/>
-      <ownedOperation xmi:id="_klProHr_EeS1R5UmmCBp8w" name="ajouterObjet"/>
-      <ownedOperation xmi:id="_txpJwHr_EeS1R5UmmCBp8w" name="ajouterEnchainementAvant"/>
-      <ownedOperation xmi:id="_TuhJoHsAEeS1R5UmmCBp8w" name="ajouterEnchainementApres"/>
-      <ownedOperation xmi:id="_bHNOcHsAEeS1R5UmmCBp8w" name="supprimerEnchainementAvant"/>
-      <ownedOperation xmi:id="_dhyagHsAEeS1R5UmmCBp8w" name="supprimerEnchainementApres"/>
-      <ownedOperation xmi:id="_3_yjUHsAEeS1R5UmmCBp8w" name="setTexte"/>
-      <ownedOperation xmi:id="_63X0cHsAEeS1R5UmmCBp8w" name="setNom"/>
+      <ownedOperation xmi:id="_WMxxQHr_EeS1R5UmmCBp8w" name="supprimerObjet">
+        <ownedParameter xmi:id="_AXWuYHsFEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_-VrVEHsFEeS1R5UmmCBp8w" name="nom">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-VrVEXsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-VrVEnsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_klProHr_EeS1R5UmmCBp8w" name="ajouterObjet">
+        <ownedParameter xmi:id="_IpfjsHsFEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Csx4MHsGEeS1R5UmmCBp8w" name="nom">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Csx4MXsGEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Csx4MnsGEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_txpJwHr_EeS1R5UmmCBp8w" name="ajouterEnchainementAvant">
+        <ownedParameter xmi:id="_Ipm4cHsFEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_drA1sXsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_drA1sHsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_UoK8MHsFEeS1R5UmmCBp8w" name="idEnchainement" type="_hC0Sol3OEeSOc-yw0SMb6Q">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cgSH8XsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cgSH8HsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_TuhJoHsAEeS1R5UmmCBp8w" name="ajouterEnchainementApres">
+        <ownedParameter xmi:id="_2MC7gHsFEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2MC7gXsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2MC7gnsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_7uHc8HsFEeS1R5UmmCBp8w" name="idEnchainement" type="_hC0Sol3OEeSOc-yw0SMb6Q">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7uHc8XsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7uHc8nsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bHNOcHsAEeS1R5UmmCBp8w" name="supprimerEnchainementAvant">
+        <ownedParameter xmi:id="_5IVGcHsFEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5IVGcXsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5IVGcnsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_8k7wMHsFEeS1R5UmmCBp8w" name="idEnchainement" type="_hC0Sol3OEeSOc-yw0SMb6Q">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8k7wMXsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8k7wMnsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_dhyagHsAEeS1R5UmmCBp8w" name="supprimerEnchainementApres">
+        <ownedParameter xmi:id="_5rRbcHsFEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5rRbcXsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5rRbcnsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_8V0WIHsFEeS1R5UmmCBp8w" name="idEnchainement" type="_hC0Sol3OEeSOc-yw0SMb6Q">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8V0WIXsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8V0WInsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_3_yjUHsAEeS1R5UmmCBp8w" name="setTexte">
+        <ownedParameter xmi:id="_Ip-E0HsFEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rsoWUHsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rsnvQHsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_sGoKsHsFEeS1R5UmmCBp8w" name="texte">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u9PLcHsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u9N9UHsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_63X0cHsAEeS1R5UmmCBp8w" name="setNom">
+        <ownedParameter xmi:id="_IqC9UHsFEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pSvt0HsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pSvGwHsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_lDGdkHsFEeS1R5UmmCBp8w" name="nom">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qYTnsHsFEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qYTAoHsFEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_hC0Sol3OEeSOc-yw0SMb6Q" name="Enchainement">
       <ownedAttribute xmi:id="_hC0So13OEeSOc-yw0SMb6Q" name="description" visibility="private">
@@ -1787,11 +1867,64 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hC0Srl3OEeSOc-yw0SMb6Q" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hC0Sr13OEeSOc-yw0SMb6Q" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_81g8IHsAEeS1R5UmmCBp8w" name="modifierSectionAvant"/>
-      <ownedOperation xmi:id="_KdB6sHsBEeS1R5UmmCBp8w" name="modifierSectionApres"/>
-      <ownedOperation xmi:id="_mpCdcHsBEeS1R5UmmCBp8w" name="setDescription"/>
-      <ownedOperation xmi:id="_sq55QHsBEeS1R5UmmCBp8w" name="ajouterObjet"/>
-      <ownedOperation xmi:id="_1baFkHsBEeS1R5UmmCBp8w" name="supprimerObjet"/>
+      <ownedOperation xmi:id="_81g8IHsAEeS1R5UmmCBp8w" name="modifierSectionAvant">
+        <ownedParameter xmi:id="_GcPzkHsGEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GcPzkXsGEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GcPzknsGEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_LU9O8HsGEeS1R5UmmCBp8w" name="idSection" type="_hC0Sol3OEeSOc-yw0SMb6Q">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LU9O8XsGEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LU9O8nsGEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KdB6sHsBEeS1R5UmmCBp8w" name="modifierSectionApres">
+        <ownedParameter xmi:id="_GRnQ4HsGEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GRnQ4XsGEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GRnQ4nsGEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_JjtTwHsGEeS1R5UmmCBp8w" name="idSection" type="_hC0Sol3OEeSOc-yw0SMb6Q">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JjtTwXsGEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JjtTwnsGEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_mpCdcHsBEeS1R5UmmCBp8w" name="setDescription">
+        <ownedParameter xmi:id="_GkxdcHsGEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GkxdcXsGEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GkxdcnsGEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_NkfooHsGEeS1R5UmmCBp8w" name="description">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NkfooXsGEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NkfoonsGEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_sq55QHsBEeS1R5UmmCBp8w" name="ajouterObjet">
+        <ownedParameter xmi:id="_GFwmMHsGEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GFwmMXsGEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GFwmMnsGEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_IQ0IgHsGEeS1R5UmmCBp8w" name="nom">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IQ0IgXsGEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IQ0IgnsGEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_1baFkHsBEeS1R5UmmCBp8w" name="supprimerObjet">
+        <ownedParameter xmi:id="_GwEugHsGEeS1R5UmmCBp8w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GwEugXsGEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GwEugnsGEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_IDihgHsGEeS1R5UmmCBp8w" name="nom">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IDihgXsGEeS1R5UmmCBp8w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IDihgnsGEeS1R5UmmCBp8w" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_hC0SsF3OEeSOc-yw0SMb6Q" name="Objet">
       <ownedAttribute xmi:id="_hC0SsV3OEeSOc-yw0SMb6Q" name="nom" visibility="private">
