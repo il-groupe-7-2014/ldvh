@@ -1,4 +1,4 @@
-package frm.graphed;
+package ihm.graphed;
 
 import java.awt.*;
 import java.awt.geom.*;
@@ -45,17 +45,6 @@ public class ToolBar extends JPanel
       Edge[] edgeTypes = graph.getEdgePrototypes();
       for (int i = 0; i < edgeTypes.length; i++)
          add(edgeTypes[i]);
-      
-      addButtonInfos();
-   }
-   
-   public void addButtonInfos() {
-		JToggleButton buttonInfos = new JToggleButton("Infos");
-		buttonInfos.setSize(BUTTON_SIZE, BUTTON_SIZE);
-		group.add(buttonInfos);
-		add(buttonInfos);
-		buttonInfos.setSelected(true);
-		tools.add("infos");
    }
 
    /**

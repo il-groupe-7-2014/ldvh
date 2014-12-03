@@ -1,8 +1,5 @@
-package frm.graphed;
-import java.awt.BasicStroke;
+package ihm.graphed;
 import java.awt.Graphics2D;
-import java.awt.Shape;
-import java.awt.geom.GeneralPath;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;

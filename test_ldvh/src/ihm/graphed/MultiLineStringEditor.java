@@ -1,4 +1,4 @@
-package frm.graphed;
+package ihm.graphed;
 import java.awt.Component;
 import java.beans.PropertyEditorSupport;
 import javax.swing.JScrollPane;

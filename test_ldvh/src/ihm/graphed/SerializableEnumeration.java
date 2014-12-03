@@ -1,4 +1,4 @@
-package frm.graphed;
+package ihm.graphed;
 import java.io.ObjectStreamException;
 import java.io.Serializable;
 import java.lang.reflect.Field;

@@ -1,4 +1,4 @@
-package frm.graphed;
+package ihm.graphed;
 
 import java.awt.*;
 import java.util.*;

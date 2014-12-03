@@ -1,4 +1,4 @@
-package frm.graphed;
+package ihm.graphed;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.geom.GeneralPath;

@@ -1,4 +1,4 @@
-package frm.graphed;
+package ihm.graphed;
 
 /**
    A property editor for the BentStyle type.

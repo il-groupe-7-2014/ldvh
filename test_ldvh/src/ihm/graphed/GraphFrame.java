@@ -1,10 +1,27 @@
-package frm.graphed;
+package ihm.graphed;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
-import javax.swing.*;
-import javax.swing.event.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+import javax.swing.BorderFactory;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 /**
    This frame shows the toolbar and the graph.
@@ -17,6 +34,7 @@ public class GraphFrame extends JFrame
    */
    public GraphFrame(final Graph graph)
    {  
+	  setTitle("LDVH");
       setSize(FRAME_WIDTH, FRAME_HEIGHT);
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -29,6 +47,17 @@ public class GraphFrame extends JFrame
       setJMenuBar(menuBar);
       JMenu fileMenu = new JMenu("Fichier");
       menuBar.add(fileMenu);
+      
+      JMenuItem newItem = new JMenuItem("Créer un livre");
+//    openItem.addActionListener(new
+//       ActionListener()
+//       {
+//          public void actionPerformed(ActionEvent event)
+//          {
+//             creerLivre();
+//          }
+//       });
+      fileMenu.add(newItem);
 
       JMenuItem openItem = new JMenuItem("Charger un livre");
 //      openItem.addActionListener(new
@@ -36,7 +65,7 @@ public class GraphFrame extends JFrame
 //         {
 //            public void actionPerformed(ActionEvent event)
 //            {
-//               openFile();
+//               chargerLivre();
 //            }
 //         });
       fileMenu.add(openItem);
@@ -47,10 +76,21 @@ public class GraphFrame extends JFrame
 //         {
 //            public void actionPerformed(ActionEvent event)
 //            {
-//               saveFile();
+//               sauvegarderLivre();
 //            }
 //         });
       fileMenu.add(saveItem);
+      
+      JMenuItem generateItem = new JMenuItem("Générer le livre");
+//    generateItem.addActionListener(new 
+//       ActionListener()
+//       {
+//          public void actionPerformed(ActionEvent event)
+//          {
+//             genererLivre();
+//          }
+//       });
+      fileMenu.add(generateItem);
 
       JMenuItem exitItem = new JMenuItem("Quitter");
       exitItem.addActionListener(new
@@ -98,9 +138,18 @@ public class GraphFrame extends JFrame
       toolBar = new ToolBar(graph);
       panel = new GraphPanel(toolBar, graph);
       scrollPane = new JScrollPane(panel);
+      
+      infosTextArea = new JTextArea(NUMBER_ROWS_TEXT_INFOS,NUMBER_COLS_TEXT_INFOS);
+	  infosTextArea.setEditable(false);
+	  infosTextArea.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+	  JPanel infosPanel = new JPanel(new BorderLayout());
+      infosPanel.add(infosTextArea, BorderLayout.CENTER);
+      infosTextArea.setText("Coucou");
+      
       Container contentPane = getContentPane();
       contentPane.add(toolBar, BorderLayout.NORTH);
       contentPane.add(scrollPane, BorderLayout.CENTER);
+      contentPane.add(infosPanel, BorderLayout.EAST);
    }
 
    /**
@@ -169,9 +218,12 @@ public class GraphFrame extends JFrame
 
    private Graph graph;
    private GraphPanel panel;
+   private JTextArea infosTextArea;
    private JScrollPane scrollPane;
    private ToolBar toolBar;
 
    public static final int FRAME_WIDTH = 600;
    public static final int FRAME_HEIGHT = 400;
+   public static final int NUMBER_COLS_TEXT_INFOS = 15;
+   public static final int NUMBER_ROWS_TEXT_INFOS = 30;
 }
