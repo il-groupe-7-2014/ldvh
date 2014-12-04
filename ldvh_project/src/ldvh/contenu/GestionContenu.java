@@ -1,6 +1,7 @@
 package ldvh.contenu;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -10,12 +11,13 @@ import ldvh.interfaces.IContenu;
 
 public class GestionContenu implements IContenu {
 	
-	private Set<Objet> listeObjet;
-	private Set<Section> listeSections;
+	private HashMap<Integer,Section> hashMapSections;
+	private HashMap<Integer,Enchainement> hashMapEnchainements;
 	private List<Objet> listeObjets;
-	private Set<Enchainement> enchainements;
 	
 	public GestionContenu() {
+		hashMapSections = new HashMap<Integer,Section>();
+		hashMapEnchainements = new HashMap<Integer,Enchainement>();
 		listeObjets = new ArrayList<Objet>();
 	}
 
@@ -35,7 +37,10 @@ public class GestionContenu implements IContenu {
 
 	
 	public boolean viderContenu() {
-		return false;
+		hashMapSections.clear();
+		hashMapEnchainements.clear();
+		listeObjets.clear();
+		return true;
 	}
 
 	
@@ -64,7 +69,7 @@ public class GestionContenu implements IContenu {
 		while(ite.hasNext()) {
 			Objet o = ite.next();
 			if(o.getNom().compareTo(nomObjet)==0) {
-				listeObjet.remove(o);
+				listeObjets.remove(o);
 				return true;
 			}
 		}
