@@ -23,40 +23,57 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
+import ldvh.livre.GestionLivre;
+
 /**
    This frame shows the toolbar and the graph.
 */
 public class GraphFrame extends JFrame
 {
+	
+	public static final int FRAME_WIDTH = 600;
+	public static final int FRAME_HEIGHT = 400;
+	public static final int NUMBER_COLS_TEXT_INFOS = 15;
+	public static final int NUMBER_ROWS_TEXT_INFOS = 30;
+	
+	private Graph graph;
+	private GraphPanel panel;
+	private JTextArea infosTextArea;
+	private JScrollPane scrollPane;
+	private ToolBar toolBar;
+	private GestionLivre gestionLivre;
+	
    /**
       Constructs a graph frame that displays a given graph.
       @param graph the graph to display
    */
    public GraphFrame(final Graph graph)
    {  
-	  setTitle("LDVH");
-      setSize(FRAME_WIDTH, FRAME_HEIGHT);
-      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	  this.setTitle("LDVH");
+	  this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+	  this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
       this.graph = graph;
-
-      constructFrameComponents();
+      this.gestionLivre = new GestionLivre();
+      
       // set up menus
-
       JMenuBar menuBar = new JMenuBar();
       setJMenuBar(menuBar);
       JMenu fileMenu = new JMenu("Fichier");
       menuBar.add(fileMenu);
       
       JMenuItem newItem = new JMenuItem("Créer un livre");
-//    openItem.addActionListener(new
-//       ActionListener()
-//       {
-//          public void actionPerformed(ActionEvent event)
-//          {
-//             creerLivre();
-//          }
-//       });
+      newItem.addActionListener(new ActionListener() {
+    	  
+    	  public void actionPerformed(ActionEvent event) {
+    		  String title = JOptionPane.showInputDialog(GraphFrame.this, "Titre du livre : ","");
+    		  String authorName = JOptionPane.showInputDialog(GraphFrame.this, "Nom de l'auteur du livre : ","");
+    		  gestionLivre.creerLivre(title,authorName);
+    		  constructFrameComponents();
+    	  }
+            
+      });
+      
       fileMenu.add(newItem);
 
       JMenuItem openItem = new JMenuItem("Charger un livre");
@@ -113,22 +130,38 @@ public class GraphFrame extends JFrame
             }
          });
 
-      JMenuItem propertiesItem 
+      JMenuItem modifyItem 
          = new JMenuItem("Modifier");
-      propertiesItem.addActionListener(new 
-         ActionListener()
-         {
-            public void actionPerformed(ActionEvent event)
-            {
-               panel.editSelected();
-            }
-         });
-
+      modifyItem.addActionListener(new 
+    		  ActionListener() {
+				public void actionPerformed(ActionEvent event) {
+					if (panel.getSelected() instanceof CircleNode) {
+						int idSelected = 1;//panel.getIdSelected();
+						if (true) // A modifier
+							JOptionPane.showMessageDialog(null,"Modification de la section "+idSelected+" réussie!");
+						else
+							JOptionPane.showMessageDialog(null, "ok","Erreur lors de la modification de la section "+idSelected+"!",JOptionPane.ERROR_MESSAGE);
+					}
+					else if (panel.getSelected() instanceof Edge) {
+						
+					}
+				}
+			}
+      );
+      
       JMenu editMenu = new JMenu("Editer");
       editMenu.add(deleteItem);
-      editMenu.add(propertiesItem);
+      editMenu.add(modifyItem);
       menuBar.add(editMenu);
    }
+   
+	public String getInfosTextArea() {
+		return infosTextArea.getText();
+	}
+
+	public void setInfosTextArea(String infos) {
+		infosTextArea.setText(infos);
+	}
 
    /**
       Constructs the tool bar and graph panel.
@@ -136,7 +169,7 @@ public class GraphFrame extends JFrame
    private void constructFrameComponents()
    {
       toolBar = new ToolBar(graph);
-      panel = new GraphPanel(toolBar, graph);
+      panel = new GraphPanel(toolBar, graph, gestionLivre, infosTextArea);
       scrollPane = new JScrollPane(panel);
       
       infosTextArea = new JTextArea(NUMBER_ROWS_TEXT_INFOS,NUMBER_COLS_TEXT_INFOS);
@@ -144,12 +177,12 @@ public class GraphFrame extends JFrame
 	  infosTextArea.setBorder(BorderFactory.createLineBorder(Color.GRAY));
 	  JPanel infosPanel = new JPanel(new BorderLayout());
       infosPanel.add(infosTextArea, BorderLayout.CENTER);
-      infosTextArea.setText("Coucou");
       
       Container contentPane = getContentPane();
       contentPane.add(toolBar, BorderLayout.NORTH);
       contentPane.add(scrollPane, BorderLayout.CENTER);
       contentPane.add(infosPanel, BorderLayout.EAST);
+      revalidate();
    }
 
    /**
@@ -215,15 +248,5 @@ public class GraphFrame extends JFrame
          }
       }
    }
-
-   private Graph graph;
-   private GraphPanel panel;
-   private JTextArea infosTextArea;
-   private JScrollPane scrollPane;
-   private ToolBar toolBar;
-
-   public static final int FRAME_WIDTH = 600;
-   public static final int FRAME_HEIGHT = 400;
-   public static final int NUMBER_COLS_TEXT_INFOS = 15;
-   public static final int NUMBER_ROWS_TEXT_INFOS = 30;
+   
 }

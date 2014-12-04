@@ -1,5 +1,6 @@
 package ldvh.contenu;
 
+import java.util.List;
 import java.util.Set;
 
 public class Section {
@@ -7,7 +8,7 @@ public class Section {
 	private String texte;
 	private Integer id;
 	private String nom;
-	private Objet listeObjet;
+	private List<Objet> listeObjet;
 	private Set<Enchainement> avant;
 	private Set<Enchainement> apres;
 	private Etat etat;
@@ -38,11 +39,33 @@ public class Section {
 	}
 
 	public boolean setTexte(String texte) {
-		return false;
+		this.texte = texte;
+		return true;
 	}
 
 	public boolean setNom(String nom) {
-		return false;
+		this.nom = nom;
+		return true;
+	}
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public List<Objet> getListeObjet() {
+		return listeObjet;
+	}
+
+	public String getTexte() {
+		return texte;
+	}
+
+	public String getNom() {
+		return nom;
 	}
 	
 }

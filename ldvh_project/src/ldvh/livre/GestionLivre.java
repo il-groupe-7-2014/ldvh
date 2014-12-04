@@ -1,4 +1,5 @@
 package ldvh.livre;
+import ldvh.contenu.GestionContenu;
 import ldvh.interfaces.IContenu;
 import ldvh.interfaces.ILivre;
 
@@ -6,6 +7,13 @@ public class GestionLivre extends Livre implements ILivre {
 	
 	private Livre livre;
 	private IContenu contenu;
+	
+	public GestionLivre() {
+	}
+	
+	public IContenu getContenu() {
+		return contenu;
+	}
 	
 	public boolean sauvegarderLivre(Object Stringfile) {
 		return false;
@@ -35,7 +43,9 @@ public class GestionLivre extends Livre implements ILivre {
 
 	
 	public boolean creerLivre(String titre, String auteur) {
-		return false;
+		livre = new Livre(titre,auteur);
+		contenu = new GestionContenu();
+		return true;
 	}
 
 	

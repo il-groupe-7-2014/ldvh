@@ -1,6 +1,10 @@
 package ldvh.contenu;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
+
 import ldvh.interfaces.IContenu;
 
 
@@ -8,8 +12,12 @@ public class GestionContenu implements IContenu {
 	
 	private Set<Objet> listeObjet;
 	private Set<Section> listeSections;
-	private Set<Objet> listeObjets;
+	private List<Objet> listeObjets;
 	private Set<Enchainement> enchainements;
+	
+	public GestionContenu() {
+		listeObjets = new ArrayList<Objet>();
+	}
 
 	public int[] getIdSectionSuivante(int idSection) {
 		return null;
@@ -52,17 +60,33 @@ public class GestionContenu implements IContenu {
 
 	
 	public boolean supprimerObjet(String nomObjet) {
+		Iterator<Objet> ite = listeObjets.iterator();
+		while(ite.hasNext()) {
+			Objet o = ite.next();
+			if(o.getNom().compareTo(nomObjet)==0) {
+				listeObjet.remove(o);
+				return true;
+			}
+		}
 		return false;
 	}
 
 	
 	public boolean isObjet(String nomObjet) {
+		Iterator<Objet> ite = listeObjets.iterator();
+		while(ite.hasNext()) {
+			Objet o = ite.next();
+			if(o.getNom().compareTo(nomObjet)==0) {
+				return true;
+			}
+		}
 		return false;
 	}
 
 	
 	public boolean ajouterObjet(String nomObjet) {
-		return false;
+		listeObjets.add(new Objet(nomObjet));
+		return true;
 	}
 
 	

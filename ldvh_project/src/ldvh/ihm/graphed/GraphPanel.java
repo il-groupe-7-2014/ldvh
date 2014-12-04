@@ -1,25 +1,59 @@
 package ldvh.ihm.graphed;
 
-import java.awt.*;
-import java.awt.geom.*;
-import java.awt.event.*;
-import javax.swing.*;
-import javax.swing.event.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
+import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
+import java.util.Iterator;
+import java.util.Set;
+
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+import ldvh.contenu.Section;
+import ldvh.livre.GestionLivre;
 
 /**
    A panel to draw a graph
 */
 public class GraphPanel extends JPanel
 {
+	
+	private Graph graph;
+	private ToolBar toolBar;
+	private Point2D lastMousePoint;
+	private Point2D rubberBandStart;
+	private Point2D dragStartPoint;
+	private Rectangle2D dragStartBounds;
+	private Object selected;
+	private static final Color BLUE = Color.BLUE;
+	private GestionLivre gestionLivre;
+	private JTextArea infosTextArea;
+	
+	public Object getSelected() {
+		return selected;
+	}
+	   
    /**
       Constructs a graph.
       @param aToolBar the tool bar with the node and edge tools
       @param aGraph the graph to be displayed and edited
    */
-   public GraphPanel(ToolBar aToolBar, Graph aGraph)
+   public GraphPanel(ToolBar aToolBar, Graph aGraph, GestionLivre gestionLivre, JTextArea infosTextArea)
    {
-      toolBar = aToolBar;
-      graph = aGraph;
+	  this.toolBar = aToolBar;
+	  this.graph = aGraph;
+      this.gestionLivre = gestionLivre;
+      this.infosTextArea = infosTextArea;
       setBackground(Color.WHITE);
 
       addMouseListener(new
@@ -30,6 +64,7 @@ public class GraphPanel extends JPanel
                Point2D mousePoint = event.getPoint();
                Node n = graph.findNode(mousePoint); 
                Edge e = graph.findEdge(mousePoint);
+               GestionLivre gL = GraphPanel.this.gestionLivre;
                Object tool = toolBar.getSelectedTool();
                if (tool == null) // select
                {
@@ -42,6 +77,15 @@ public class GraphPanel extends JPanel
                      selected = n;
                      dragStartPoint = mousePoint;
                      dragStartBounds = n.getBounds();
+                     //Affichage des infos relatives à la section lorsque le noeud correspondant est selectionné sur le graphe
+//                     StringBuffer infos = new StringBuffer();
+//                     infos.append(gL.getContenu().getTexteSection(n));
+//                     Set<String> set = gL.getContenu().getNomsObjetsSection(n);
+//                     Iterator<String> ite = set.iterator();
+//                     while (ite.hasNext())
+//                    	 infos.append(ite.next());
+//                     GraphPanel.this.infosTextArea.setText(infos.toString());
+                     
                   }
                   else 
                   {
@@ -58,6 +102,8 @@ public class GraphPanel extends JPanel
                      selected = newNode;
                      dragStartPoint = mousePoint;
                      dragStartBounds = newNode.getBounds();
+                     //Création d'une nouvelle section lors de l'ajout d'un noeud sur le graphe
+                     GraphPanel.this.gestionLivre.getContenu().ajouterSection();
                   }
                   else if (n != null)
                   {
@@ -70,6 +116,7 @@ public class GraphPanel extends JPanel
                {
                   if (n != null) rubberBandStart = mousePoint;
                }
+               
                lastMousePoint = mousePoint;
                repaint();
             }
@@ -81,10 +128,12 @@ public class GraphPanel extends JPanel
                {
                   Point2D mousePoint = event.getPoint();
                   Edge prototype = (Edge) tool;
-                  Edge newEdge = (Edge) prototype.clone(); 
+                  Edge newEdge = (Edge) prototype.clone();
                   if (graph.connect(newEdge, 
-                         rubberBandStart, mousePoint))
+                         rubberBandStart, mousePoint)) {
                      selected = newEdge;
+                     GraphPanel.this.gestionLivre.getContenu().ajouterEnchainement();
+                  }
                }
 
                revalidate();
@@ -215,13 +264,5 @@ public class GraphPanel extends JPanel
          (int) bounds.getMaxX(), 
          (int) bounds.getMaxY());
    }
-
-   private Graph graph;
-   private ToolBar toolBar;
-   private Point2D lastMousePoint;
-   private Point2D rubberBandStart;
-   private Point2D dragStartPoint;
-   private Rectangle2D dragStartBounds;
-   private Object selected;
-   private static final Color BLUE = Color.BLUE;  
+   
 }                               

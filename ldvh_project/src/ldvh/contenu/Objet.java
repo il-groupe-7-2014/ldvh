@@ -3,5 +3,13 @@ package ldvh.contenu;
 public class Objet {
 	
 	private String nom;
-	private Section section;
+	
+	public Objet(String nom) {
+		this.nom = nom;
+	}
+	
+	public String getNom() {
+		return nom;
+	}
+	
 }
