@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Enchainement {
+	
 	private String description;
 	private Integer id;
 	private Section sectionAvant;

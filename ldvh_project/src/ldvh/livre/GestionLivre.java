@@ -9,6 +9,7 @@ public class GestionLivre extends Livre implements ILivre {
 	private IContenu contenu;
 	
 	public GestionLivre() {
+		
 	}
 	
 	public IContenu getContenu() {
@@ -36,29 +37,24 @@ public class GestionLivre extends Livre implements ILivre {
 		return false;
 	}
 
-	
 	public boolean genererLivre() {
 		return false;
 	}
-
 	
 	public boolean creerLivre(String titre, String auteur) {
 		livre = new Livre(titre,auteur);
 		contenu = new GestionContenu();
 		return true;
 	}
-
 	
 	public boolean chargerLivre() {
 		return false;
 	}
-
 	
 	public boolean chargerInformationsLivre() {
 		return false;
 	}
 
-	
 	public boolean sauvegarderInformationsLivre() {
 		return false;
 	}

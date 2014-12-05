@@ -3,7 +3,6 @@ import javax.swing.JFrame;
 
 import ldvh.ihm.graphed.GraphFrame;
 import ldvh.ihm.graphed.SimpleGraph;
-import ldvh.livre.GestionLivre;
 
 public class LivreEditor {
 	
