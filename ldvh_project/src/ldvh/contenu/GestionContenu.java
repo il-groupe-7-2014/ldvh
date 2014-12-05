@@ -54,8 +54,9 @@ public class GestionContenu implements IContenu {
 	}
 
 	
-	public boolean ajouterSection() {
-		return false;
+	public boolean ajouterSection(String nom, String texte) {
+		hashMapSections.put(hashMapSections.size(), new Section(hashMapSections.size(), texte, nom));
+		return true;
 	}
 
 	

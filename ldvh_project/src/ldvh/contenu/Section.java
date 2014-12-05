@@ -1,5 +1,7 @@
 package ldvh.contenu;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -8,63 +10,97 @@ public class Section {
 	private String texte;
 	private Integer id;
 	private String nom;
-	private List<Objet> listeObjet;
-	private Set<Enchainement> avant;
-	private Set<Enchainement> apres;
+	private List<Objet> listeObjets;
+	private List<Enchainement> avant;
+	private List<Enchainement> apres;
 	private Etat etat;
-	private Set<Objet> objets;
+	
+	protected Section(Integer id, String texte, String nom) {
+		this.id = id;
+		this.texte = texte;
+		this.nom = nom;
+		listeObjets = new ArrayList<Objet>();
+		avant = new ArrayList<Enchainement>();
+		apres = new ArrayList<Enchainement>();
+		etat = new Inatteignable();
+	}
 
-	public boolean supprimerObjet(String nom) {
+	protected boolean supprimerObjet(String nom) {
+		Iterator<Objet> ite = listeObjets.iterator();
+		while(ite.hasNext()) {
+			Objet o = ite.next();
+			if(o.getNom().compareTo(nom)==0) {
+				listeObjets.remove(o);
+				return true;
+			}
+		}
 		return false;
 	}
 
-	public boolean ajouterObjet(String nom) {
+	protected boolean ajouterObjet(String nom) {
+		listeObjets.add(new Objet(nom));
+		return true;
+	}
+
+	protected boolean ajouterEnchainementAvant(Enchainement enchainement) {
+		if (!avant.contains(enchainement)) {
+			avant.add(enchainement);
+			return true;
+		}
 		return false;
 	}
 
-	public boolean ajouterEnchainementAvant(Enchainement idEnchainement) {
+	protected boolean ajouterEnchainementApres(Enchainement enchainement) {
+		if (!apres.contains(enchainement)) {
+			apres.add(enchainement);
+			return true;
+		}
 		return false;
 	}
 
-	public boolean ajouterEnchainementApres(Enchainement idEnchainement) {
+	protected boolean supprimerEnchainementAvant(Enchainement enchainement) {
+		if (avant.contains(enchainement)) {
+			avant.remove(enchainement);
+			return true;
+		}
 		return false;
 	}
 
-	public boolean supprimerEnchainementAvant(Enchainement idEnchainement) {
+	protected boolean supprimerEnchainementApres(Enchainement enchainement) {
+		if (apres.contains(enchainement)) {
+			apres.remove(enchainement);
+			return true;
+		}
 		return false;
 	}
 
-	public boolean supprimerEnchainementApres(Enchainement idEnchainement) {
-		return false;
-	}
-
-	public boolean setTexte(String texte) {
+	protected boolean setTexte(String texte) {
 		this.texte = texte;
 		return true;
 	}
 
-	public boolean setNom(String nom) {
+	protected boolean setNom(String nom) {
 		this.nom = nom;
 		return true;
 	}
 	
-	public Integer getId() {
+	protected Integer getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	protected void setId(Integer id) {
 		this.id = id;
 	}
 
-	public List<Objet> getListeObjet() {
-		return listeObjet;
+	protected List<Objet> getListeObjets() {
+		return listeObjets;
 	}
 
-	public String getTexte() {
+	protected String getTexte() {
 		return texte;
 	}
 
-	public String getNom() {
+	protected String getNom() {
 		return nom;
 	}
 	

@@ -45,6 +45,10 @@ public class ToolBar extends JPanel
       Edge[] edgeTypes = graph.getEdgePrototypes();
       for (int i = 0; i < edgeTypes.length; i++)
          add(edgeTypes[i]);
+      
+      JButton addObjetButton = new JButton("Obj");
+      group.add(addObjetButton);
+      tools.add(null);
    }
 
    /**
