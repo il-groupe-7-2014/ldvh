@@ -14,7 +14,7 @@ public class Section {
 	private List<Enchainement> apres;
 	private Etat etat;
 	
-	protected Section(Integer id, String texte, String nom) {
+	 Section(Integer id, String texte, String nom) {
 		this.id = id;
 		this.texte = texte;
 		this.nom = nom;
@@ -24,7 +24,11 @@ public class Section {
 		etat = new Inatteignable();
 	}
 
-	protected boolean supprimerObjet(Objet objet) {
+	public Section() {
+		// TODO Auto-generated constructor stub
+	}
+
+	 boolean supprimerObjet(Objet objet) {
 		if (listeObjets.contains(objet)) {
 			listeObjets.remove(objet);
 			return true;
@@ -32,7 +36,7 @@ public class Section {
 		return false;
 	}
 
-	protected boolean ajouterObjet(Objet objet) {
+	 boolean ajouterObjet(Objet objet) {
 		if (!listeObjets.contains(objet)) {
 			listeObjets.add(objet);
 			return true;
@@ -40,7 +44,7 @@ public class Section {
 		return false;
 	}
 
-	protected boolean ajouterEnchainementAvant(Enchainement enchainement) {
+	 boolean ajouterEnchainementAvant(Enchainement enchainement) {
 		if (!avant.contains(enchainement)) {
 			avant.add(enchainement);
 			return true;
@@ -48,7 +52,7 @@ public class Section {
 		return false;
 	}
 
-	protected boolean ajouterEnchainementApres(Enchainement enchainement) {
+	 boolean ajouterEnchainementApres(Enchainement enchainement) {
 		if (!apres.contains(enchainement)) {
 			apres.add(enchainement);
 			return true;
@@ -56,7 +60,7 @@ public class Section {
 		return false;
 	}
 
-	protected boolean supprimerEnchainementAvant(Enchainement enchainement) {
+	 boolean supprimerEnchainementAvant(Enchainement enchainement) {
 		if (avant.contains(enchainement)) {
 			avant.remove(enchainement);
 			return true;
@@ -64,7 +68,7 @@ public class Section {
 		return false;
 	}
 
-	protected boolean supprimerEnchainementApres(Enchainement enchainement) {
+	 boolean supprimerEnchainementApres(Enchainement enchainement) {
 		if (apres.contains(enchainement)) {
 			apres.remove(enchainement);
 			return true;
@@ -72,33 +76,33 @@ public class Section {
 		return false;
 	}
 
-	protected List <Enchainement> getListEnchainementAvant() {
+	 List <Enchainement> getListEnchainementAvant() {
 		return avant;
 	}
 	
-	protected List <Enchainement> getListEnchainementApres() {
+	 List <Enchainement> getListEnchainementApres() {
 		return apres;
 	}
 
-	protected boolean setTexte(String texte) {
+	 boolean setTexte(String texte) {
 		this.texte = texte;
 		return true;
 	}
 
-	protected boolean setNom(String nom) {
+	 boolean setNom(String nom) {
 		this.nom = nom;
 		return true;
 	}
 	
-	protected Integer getId() {
+	 Integer getId() {
 		return id;
 	}
 
-	protected void setId(Integer id) {
+	 void setId(Integer id) {
 		this.id = id;
 	}
 
-	protected List<String> getNomsObjets() {
+	 List<String> getNomsObjets() {
 		ArrayList <String> listeNoms = new ArrayList <String> ();
 		for (int i = 0, length = listeObjets.size(); i < length; ++i) {
 			listeNoms.add(listeObjets.get(i).getNom());
@@ -106,11 +110,11 @@ public class Section {
 		return listeNoms;
 	}
 
-	protected String getTexte() {
+	 String getTexte() {
 		return this.texte;
 	}
 
-	protected String getNom() {
+	 String getNom() {
 		return this.nom;
 	}
 	

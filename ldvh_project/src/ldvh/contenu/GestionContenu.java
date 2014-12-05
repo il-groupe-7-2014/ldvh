@@ -69,6 +69,10 @@ public class GestionContenu implements IContenu {
 		return hashMapSections.get(idSection).getTexte();
 	}
 	
+	public String getNomSection(int idSection){
+		return hashMapSections.get(idSection).getNom();
+	}
+	
 	public boolean ajouterSection(String nom, String texte) {
 		int id = 0;
 		do {
