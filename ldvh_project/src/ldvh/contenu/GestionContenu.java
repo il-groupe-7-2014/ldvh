@@ -1,9 +1,11 @@
 package ldvh.contenu;
 
+import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 import ldvh.interfaces.IContenu;
@@ -76,7 +78,6 @@ public class GestionContenu implements IContenu {
 		}
 		return false;
 	}
-
 	
 	public boolean isObjet(String nomObjet) {
 		Iterator<Objet> ite = listeObjets.iterator();
@@ -102,7 +103,8 @@ public class GestionContenu implements IContenu {
 
 	
 	public boolean modifierEnchainement(int idSectionAvant, int idSectionApres,
-			String texte, Set<String> listObjets, int idEnchainement) {
+			String texte, List <String> listObjets, int idEnchainement) {
+		
 		return false;
 	}
 
@@ -127,29 +129,39 @@ public class GestionContenu implements IContenu {
 	}
 
 	
-	public boolean modifierSection(int idSection, String texte,
-			String... listObjets) {
+	public boolean modifierSection(int idSection, String texte, String listObjets) {
 		return false;
 	}
 
 	
-	public boolean ajouterEnchainement() {
-		return false;
+	public boolean ajouterEnchainement(String description, Section avant, Section apres) {
+		int id = hashMapEnchainements.size() + 1;
+		Enchainement enchainement = new Enchainement(id, description, avant, apres);
+		hashMapEnchainements.put(id, enchainement);
+		return true;
 	}
 
 	
-	public Set<String> getNomsObjetsSection(int idSection) {
+	public List <String> getNomsObjetsSection(int idSection) {
 		return null;
 	}
 
 	
-	public int[] getIdSections() {
-		return null;
+	public int [] getIdSections() {
+		Set <Integer> set = hashMapSections.keySet();
+		int [] tableId = new int[set.size()];
+		int i = 0;
+		for (Iterator <Integer> lol = set.iterator(); lol.hasNext(); ++i) {
+			tableId[i] = lol.next();
+		}
+		return tableId;
 	}
 
 	
-	public Set<String> getNomsObjetsEnchainement(int idEnchainement) {
+	public List <String> getNomsObjetsEnchainement(int idEnchainement) {
+		Enchainement enchainement = hashMapEnchainements.get(idEnchainement);
+		if (enchainement != null)
+			return enchainement.getNomsObjets();
 		return null;
 	}
-	
 }

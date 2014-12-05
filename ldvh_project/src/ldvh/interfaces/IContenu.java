@@ -1,5 +1,6 @@
 package ldvh.interfaces;
 
+import java.util.List;
 import java.util.Set;
 
 
@@ -40,15 +41,14 @@ public interface IContenu {
 	
 	public boolean setPremiereSection(int idSection);
 	
-	public boolean modifierSection(int idSection, String texte,
-			String... listObjets);
+	public boolean modifierSection(int idSection, String texte, List <String> listObjets);
 	
 	public boolean ajouterEnchainement();
 	
-	public Set<String> getNomsObjetsSection(int idSection);
+	public List <String> getNomsObjetsSection(int idSection);
 	
 	public int[] getIdSections();
 	
-	public Set<String> getNomsObjetsEnchainement(int idEnchainement);
+	public List <String> getNomsObjetsEnchainement(int idEnchainement);
 	
 }
