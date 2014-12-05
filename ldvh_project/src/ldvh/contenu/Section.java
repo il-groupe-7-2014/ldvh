@@ -3,14 +3,13 @@ package ldvh.contenu;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 public class Section {
 	
 	private String texte;
 	private Integer id;
 	private String nom;
-	private List<Objet> listeObjets;
+	private List <Objet> listeObjets;
 	private List<Enchainement> avant;
 	private List<Enchainement> apres;
 	private Etat etat;

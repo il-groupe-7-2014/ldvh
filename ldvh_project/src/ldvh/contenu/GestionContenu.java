@@ -1,11 +1,9 @@
 package ldvh.contenu;
 
-import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 import java.util.Set;
 
 import ldvh.interfaces.IContenu;
@@ -46,7 +44,7 @@ public class GestionContenu implements IContenu {
 	}
 
 	
-	public Set<String> getNomsObjets() {
+	public List <String> getNomsObjets() {
 		return null;
 	}
 
@@ -129,7 +127,7 @@ public class GestionContenu implements IContenu {
 	}
 
 	
-	public boolean modifierSection(int idSection, String texte, String listObjets) {
+	public boolean modifierSection(int idSection, String texte, List <String> listObjets) {
 		return false;
 	}
 
