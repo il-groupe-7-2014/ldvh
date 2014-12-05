@@ -48,6 +48,7 @@ public class ToolBar extends JPanel
       
       JButton addObjetButton = new JButton("Obj");
       group.add(addObjetButton);
+      add(addObjetButton);
       tools.add(null);
    }
 

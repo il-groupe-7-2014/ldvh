@@ -27,16 +27,13 @@ public class GestionContenu implements IContenu {
 		return null;
 	}
 
-	
 	public boolean isSection(int idSection) {
 		return false;
 	}
-
 	
 	public boolean isEnchainement(int idEnchainement) {
 		return false;
 	}
-
 	
 	public boolean viderContenu() {
 		hashMapSections.clear();

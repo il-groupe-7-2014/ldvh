@@ -9,4 +9,5 @@ public class Inatteignable extends Etat {
 	public void atteignable() {
 	
 	}
+	
 }

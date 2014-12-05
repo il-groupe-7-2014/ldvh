@@ -61,6 +61,7 @@ public class GraphFrame extends JFrame
       setJMenuBar(menuBar);
       JMenu fileMenu = new JMenu("Fichier");
       menuBar.add(fileMenu);
+      constructFrameComponents();
       
       JMenuItem newItem = new JMenuItem("Créer un livre");
       newItem.addActionListener(new ActionListener() {
@@ -69,7 +70,6 @@ public class GraphFrame extends JFrame
     		  String title = JOptionPane.showInputDialog(GraphFrame.this, "Titre du livre : ","");
     		  String authorName = JOptionPane.showInputDialog(GraphFrame.this, "Nom de l'auteur du livre : ","");
     		  gestionLivre.creerLivre(title,authorName);
-    		  constructFrameComponents();
     	  }
             
       });
@@ -182,7 +182,7 @@ public class GraphFrame extends JFrame
       contentPane.add(toolBar, BorderLayout.NORTH);
       contentPane.add(scrollPane, BorderLayout.CENTER);
       contentPane.add(infosPanel, BorderLayout.EAST);
-      revalidate();
+      //this.revalidate();
    }
 
    /**

@@ -1,15 +1,10 @@
 package ldvh.contenu;
 
-public class Etat {
+public abstract class Etat {
 	
 	private Section section;
 	
-	public void atteignable() {
-		
-	}
-
-	public void inatteignable() {
-		
-	}
+	public abstract void atteignable();
+	public abstract void inatteignable();
 	
 }
