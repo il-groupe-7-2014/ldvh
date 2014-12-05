@@ -3,6 +3,8 @@ package ldvh.interfaces;
 import java.util.List;
 import java.util.Set;
 
+import ldvh.contenu.Section;
+
 
 public interface IContenu {
 	
@@ -14,11 +16,11 @@ public interface IContenu {
 	
 	public boolean viderContenu();
 	
-	public Set<String> getNomsObjets();
+	public List <String> getNomsObjets();
 	
 	public String getTexteSection(int idSection);
 	
-	public boolean ajouterSection();
+	public boolean ajouterSection(String nom, String texte);
 	
 	public boolean supprimerSection(int idSection);
 	
@@ -31,7 +33,7 @@ public interface IContenu {
 	public boolean analyserGraphe();
 	
 	public boolean modifierEnchainement(int idSectionAvant, int idSectionApres,
-			String texte, Set<String> listObjets, int idEnchainement);
+			String texte, List <String> listObjets, int idEnchainement);
 	
 	public int[] getIdEnchainementsSuivants();
 	
@@ -43,7 +45,7 @@ public interface IContenu {
 	
 	public boolean modifierSection(int idSection, String texte, List <String> listObjets);
 	
-	public boolean ajouterEnchainement();
+	public boolean ajouterEnchainement(String description, Section avant, Section apres);
 	
 	public List <String> getNomsObjetsSection(int idSection);
 	
