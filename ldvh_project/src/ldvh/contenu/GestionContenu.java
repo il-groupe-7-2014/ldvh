@@ -25,16 +25,13 @@ public class GestionContenu implements IContenu {
 		return null;
 	}
 
-	
 	public boolean isSection(int idSection) {
-		return false;
+		return hashMapSections.containsKey(idSection);
 	}
 
-	
 	public boolean isEnchainement(int idEnchainement) {
-		return false;
+		return hashMapEnchainements.containsKey(idEnchainement);
 	}
-
 	
 	public boolean viderContenu() {
 		hashMapSections.clear();
@@ -43,28 +40,35 @@ public class GestionContenu implements IContenu {
 		return true;
 	}
 
-	
 	public List <String> getNomsObjets() {
-		return null;
+		ArrayList <String> listeNoms = new ArrayList <String> ();
+		for (int i = 0, length = listeObjets.size(); i < length; ++i) {
+			listeNoms.add(listeObjets.get(i).getNom());
+		}
+		return listeNoms;
 	}
-
 	
 	public String getTexteSection(int idSection) {
-		return null;
+		return hashMapSections.get(idSection).getTexte();
 	}
-
 	
 	public boolean ajouterSection(String nom, String texte) {
 		hashMapSections.put(hashMapSections.size(), new Section(hashMapSections.size(), texte, nom));
 		return true;
 	}
-
 	
 	public boolean supprimerSection(int idSection) {
+		List <Enchainement> liste = hashMapSections.get(idSection).getListEnchainementAvant();
+		for (int i = 0, length = liste.size(); i < length; ++i) {
+			liste.get(i).supprimer();
+		}
+		liste = hashMapSections.get(idSection).getListEnchainementApres();
+		for (int i = 0, length = liste.size(); i < length; ++i) {
+			liste.get(i).supprimer();
+		}
 		return false;
 	}
 
-	
 	public boolean supprimerObjet(String nomObjet) {
 		Iterator<Objet> ite = listeObjets.iterator();
 		while(ite.hasNext()) {
@@ -88,50 +92,41 @@ public class GestionContenu implements IContenu {
 		return false;
 	}
 
-	
 	public boolean ajouterObjet(String nomObjet) {
 		listeObjets.add(new Objet(nomObjet));
 		return true;
 	}
 
-	
 	public boolean analyserGraphe() {
 		return false;
 	}
 
-	
 	public boolean modifierEnchainement(int idSectionAvant, int idSectionApres,
 			String texte, List <String> listObjets, int idEnchainement) {
 		
 		return false;
 	}
 
-	
 	public int[] getIdEnchainementsSuivants() {
 		return null;
 	}
 
-	
 	public String getTexteEnchainement(int idEnchainement) {
 		return null;
 	}
 
-	
 	public boolean supprimerEnchainement(int idEnchainement) {
 		return false;
 	}
 
-	
 	public boolean setPremiereSection(int idSection) {
 		return false;
 	}
 
-	
 	public boolean modifierSection(int idSection, String texte, List <String> listObjets) {
 		return false;
 	}
 
-	
 	public boolean ajouterEnchainement(String description, Section avant, Section apres) {
 		int id = hashMapEnchainements.size() + 1;
 		Enchainement enchainement = new Enchainement(id, description, avant, apres);
@@ -139,12 +134,10 @@ public class GestionContenu implements IContenu {
 		return true;
 	}
 
-	
 	public List <String> getNomsObjetsSection(int idSection) {
 		return null;
 	}
 
-	
 	public int [] getIdSections() {
 		Set <Integer> set = hashMapSections.keySet();
 		int [] tableId = new int[set.size()];
@@ -154,7 +147,6 @@ public class GestionContenu implements IContenu {
 		}
 		return tableId;
 	}
-
 	
 	public List <String> getNomsObjetsEnchainement(int idEnchainement) {
 		Enchainement enchainement = hashMapEnchainements.get(idEnchainement);

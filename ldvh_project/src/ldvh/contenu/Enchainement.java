@@ -33,6 +33,12 @@ public class Enchainement {
 		return true;
 	}
 	
+	protected boolean supprimer() {
+		sectionAvant.supprimerEnchainementAvant(this);
+		sectionApres.supprimerEnchainementApres(this);
+		return true;
+	}
+	
 	protected List<String> getNomsObjets() {
 		ArrayList <String> listeNoms = new ArrayList <String> ();
 		for (int i = 0, length = objets.size(); i < length; ++i) {

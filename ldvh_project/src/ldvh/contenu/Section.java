@@ -73,6 +73,14 @@ public class Section {
 		return false;
 	}
 
+	protected List <Enchainement> getListEnchainementAvant() {
+		return avant;
+	}
+	
+	protected List <Enchainement> getListEnchainementApres() {
+		return apres;
+	}
+
 	protected boolean setTexte(String texte) {
 		this.texte = texte;
 		return true;
@@ -91,16 +99,20 @@ public class Section {
 		this.id = id;
 	}
 
-	protected List<Objet> getListeObjets() {
-		return listeObjets;
+	protected List<String> getNomsObjets() {
+		ArrayList <String> listeNoms = new ArrayList <String> ();
+		for (int i = 0, length = listeObjets.size(); i < length; ++i) {
+			listeNoms.add(listeObjets.get(i).getNom());
+		}
+		return listeNoms;
 	}
 
 	protected String getTexte() {
-		return texte;
+		return this.texte;
 	}
 
 	protected String getNom() {
-		return nom;
+		return this.nom;
 	}
 	
 }
