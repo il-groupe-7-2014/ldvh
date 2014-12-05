@@ -243,19 +243,13 @@ public class GraphFrame extends JFrame
 		            });
 	   //bouton supprimer les objets
 	   supprimerObjet.addActionListener(new 
-		         ActionListener()
-		         {
-		            public void actionPerformed(ActionEvent event)
-		            {
-		            	dlm.clear();
-		            	gestionLivre.getContenu().deleteAllObjets();
-		            	//suppression de la liste des objets
-		            	for (int i=0;i<gestionLivre.getContenu().getListeSections().size();i++){
-		            		gestionLivre.getContenu().getListeSections().get(i).getListeObjet().clear();
-		            	}
-		            }
-		               
-		           });
+			   ActionListener() {
+				public void actionPerformed(ActionEvent event) {
+					dlm.clear();
+					gestionLivre.getContenu().deleteAllObjets();
+				}	
+
+			});
 	 //bouton terminer
 	  terminer.addActionListener(new 
 		         ActionListener()
@@ -271,8 +265,9 @@ public class GraphFrame extends JFrame
 		            	}
 		            	
 		            	dlm.clear();
-		            	for(int j=0;j<gestionLivre.getContenu().getListeObjet().size();j++){
-		            		dlm.addElement(gestionLivre.getContenu().getListeObjet().get(j).getNom());
+		            	List<String> nomsObjets = gestionLivre.getContenu().getNomsObjets();
+		            	for(int j=0;j<nomsObjets.size();j++){
+		            		dlm.addElement(nomsObjets.get(j));
 		            	}
 		            	frame_objet.setVisible(false);
 		            }
@@ -319,7 +314,7 @@ public class GraphFrame extends JFrame
             public void actionPerformed(ActionEvent event)
             {
             	if (panel.getSelected() instanceof CircleNode){
-            		gestionLivre.getContenu().setListeSections(gestionLivre.getContenu().getListeSections());
+            		//gestionLivre.getContenu().setListeSections(gestionLivre.getContenu().getListeSections());
             		String texteSection = infosTextArea.getText();
             		String nomSection = t.getText();
             		boolean retour = gestionLivre.getContenu().modifierSection(panel.getIdSelected(), nomSection, texteSection, objetsAAJouter);
@@ -345,26 +340,14 @@ public class GraphFrame extends JFrame
 		         {
 		            public void actionPerformed(ActionEvent event)
 		            {
-		            	if (panel.getSelected() instanceof CircleNode){
-		            		String o = ""+listObjet.getSelectedItem();
-		            		
-		            		 Section s = gestionLivre.getContenu().getSectionById(panel.getIdSelected());
-		            		 
-		            		 if (s.ajouterObjet(o)==true){
-		            			 objetsAAJouter.add(o);
-		            			 JOptionPane.showMessageDialog(null, 
-		            		               "Ajout de l'objet "+o+" dans la section "+panel.getIdSelected()+" réussie!");
-		            		 }
-		            		 else{
-		            			 JOptionPane.showMessageDialog(null, "Erreur lors de l'ajout de l'objet "+o+" dans la section "+panel.getIdSelected()+"! \n Il est possible que cet objet ait déjà été ajouté dans cette section",
-			         		               "Erreur !", JOptionPane.ERROR_MESSAGE);
-		            		 }
-		            		 
-		            		
-		            		}
-		            	}
-		               
-		            });
+				if (panel.getSelected() instanceof CircleNode) {
+					String name = "" + listObjet.getSelectedItem();
+					objetsAAJouter.add(name);
+
+				}
+			}
+
+		});
 	  
 	  /**
 	   * Obtenir liste des objets
@@ -377,11 +360,10 @@ public class GraphFrame extends JFrame
 		            {
 		            	if (panel.getSelected() instanceof CircleNode){
 		            		String texteObj="-";
-		            		 Section s = gestionLivre.getContenu().getSectionById(panel.getIdSelected());
-		            		 List<Objet> objetss = s.getListeObjet();
-		            		 if (objetss!=null){
-		            		 for (Objet o:objetss){
-		            			 texteObj=texteObj+o.getNom()+"\n";
+		            		List<String> objetss = gestionLivre.getContenu().getNomsObjetsSection(panel.getIdSelected());
+		            		if (objetss!=null){
+		            		 for (String o:objetss){
+		            			 texteObj=texteObj+o+"\n";
 		            		 }
 		            		 	if (objetss.size()>0){
 		            			 JOptionPane.showMessageDialog(null, 

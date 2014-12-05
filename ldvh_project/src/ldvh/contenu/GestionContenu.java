@@ -16,21 +16,6 @@ public class GestionContenu implements IContenu {
 	private HashMap<Integer,Section> hashMapSections;
 	private HashMap<Integer,Enchainement> hashMapEnchainements;
 	private List<Objet> listeObjets;
-	
-	public List<String> getListeObjets() {
-		List<String> list = new ArrayList<String>();
-		for(int i=0;i<listeObjets.size();i++)
-			list.add(listeObjets.get(i).getNom());
-		return list;
-		
-	}
-	
-	public boolean deleteAllObjets() {
-		boolean bool = true;
-		for (int i=0;i<listeObjets.size();i++)
-			bool = supprimerObjet(listeObjets.get(i).getNom());
-		return bool;
-	}
 
 	public GestionContenu() {
 		hashMapSections = new HashMap<Integer,Section>();
@@ -63,6 +48,13 @@ public class GestionContenu implements IContenu {
 			listeNoms.add(listeObjets.get(i).getNom());
 		}
 		return listeNoms;
+	}
+	
+	public boolean deleteAllObjets() {
+		boolean bool = true;
+		for (int i=0;i<listeObjets.size();i++)
+			bool = supprimerObjet(listeObjets.get(i).getNom());
+		return bool;
 	}
 	
 	public String getTexteSection(int idSection) {
@@ -157,7 +149,17 @@ public class GestionContenu implements IContenu {
 		return false;
 	}
 
-	public boolean modifierSection(int idSection, String texte, List <String> listObjets) {
+	public boolean modifierSection(int idSection, String texte, String nom, List<String> listObjets) {
+		if (hashMapSections.containsKey(idSection)) {
+			Section s = this.hashMapSections.get(idSection);
+			s.setTexte(texte);
+			s.setNom(nom);
+			s.supprimerAllObjets();
+			for (String nomObjet : listObjets) {
+				s.ajouterObjet(new Objet(nomObjet));
+			}
+			return true;
+		}
 		return false;
 	}
 

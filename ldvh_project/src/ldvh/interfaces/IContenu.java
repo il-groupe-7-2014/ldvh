@@ -43,7 +43,7 @@ public interface IContenu {
 	
 	public boolean setPremiereSection(int idSection);
 	
-	public boolean modifierSection(int idSection, String texte, List <String> listObjets);
+	public boolean modifierSection(int idSection, String texte, String nom, List <String> listObjets);
 	
 	public boolean ajouterEnchainement(String description, Section avant, Section apres);
 	
@@ -52,8 +52,6 @@ public interface IContenu {
 	public int[] getIdSections();
 	
 	public List <String> getNomsObjetsEnchainement(int idEnchainement);
-	
-	public List<String> getListeObjets();
 	
 	public boolean deleteAllObjets();
 	
