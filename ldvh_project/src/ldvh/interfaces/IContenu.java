@@ -55,4 +55,6 @@ public interface IContenu {
 	
 	public boolean deleteAllObjets();
 	
+	public String getNomSection(int idSection);
+	
 }

@@ -14,7 +14,7 @@ public class Section {
 	private List<Enchainement> apres;
 	private Etat etat;
 	
-	protected Section(Integer id, String texte, String nom) {
+	Section(Integer id, String texte, String nom) {
 		this.id = id;
 		this.texte = texte;
 		this.nom = nom;
@@ -44,7 +44,7 @@ public class Section {
 		return false;
 	}
 
-	boolean ajouterEnchainementAvant(Enchainement enchainement) {
+	 boolean ajouterEnchainementAvant(Enchainement enchainement) {
 		if (!avant.contains(enchainement)) {
 			avant.add(enchainement);
 			return true;
@@ -68,7 +68,7 @@ public class Section {
 		return false;
 	}
 
-	boolean supprimerEnchainementApres(Enchainement enchainement) {
+	 boolean supprimerEnchainementApres(Enchainement enchainement) {
 		if (apres.contains(enchainement)) {
 			apres.remove(enchainement);
 			return true;
@@ -76,45 +76,45 @@ public class Section {
 		return false;
 	}
 
-	List <Enchainement> getListEnchainementAvant() {
+	 List <Enchainement> getListEnchainementAvant() {
 		return avant;
 	}
 	
-	List <Enchainement> getListEnchainementApres() {
+	 List <Enchainement> getListEnchainementApres() {
 		return apres;
 	}
 
-	boolean setTexte(String texte) {
+	 boolean setTexte(String texte) {
 		this.texte = texte;
 		return true;
 	}
 
-	boolean setNom(String nom) {
+	 boolean setNom(String nom) {
 		this.nom = nom;
 		return true;
 	}
 	
-	Integer getId() {
+	 Integer getId() {
 		return id;
 	}
 
-	void setId(Integer id) {
+	 void setId(Integer id) {
 		this.id = id;
 	}
 
-	List<String> getNomsObjets() {
+	 List<String> getNomsObjets() {
 		ArrayList <String> listeNoms = new ArrayList <String> ();
 		for (int i = 0, length = listeObjets.size(); i < length; ++i) {
 			listeNoms.add(listeObjets.get(i).getNom());
 		}
 		return listeNoms;
-	}
+	 }
 
-	String getTexte() {
+	 String getTexte() {
 		return this.texte;
 	}
 
-	String getNom() {
+	 String getNom() {
 		return this.nom;
 	}
 	

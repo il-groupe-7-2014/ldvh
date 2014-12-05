@@ -8,6 +8,7 @@ import java.util.HashMap;
 
 import javax.swing.*;
 import javax.swing.event.*;
+
 import ldvh.contenu.*;
 /**
    A panel to draw a graph
@@ -62,9 +63,11 @@ public class GraphPanel extends JPanel
                      dragStartPoint = mousePoint;
                      dragStartBounds = newNode.getBounds();
                      //ajouter section ici
-                     Section section = new Section();
-                     section.setId(ids++);
-                     gf.getGestionLivre().getContenu().ajouterSection(section);
+                     JOptionPane jop = new JOptionPane();
+     				JOptionPane jop2 = new JOptionPane();
+                     String nom = jop.showInputDialog(null,"Veuillez saisir le nom de votre section !","Création d'une section !", JOptionPane.QUESTION_MESSAGE);
+     				String texte = jop.showInputDialog(null,"Veuillez saisir le texte de votre section !","Création d'une section !", JOptionPane.QUESTION_MESSAGE);
+                     gf.getGestionLivre().getContenu().ajouterSection(nom,texte);
                     
                      map.put(selected, ids-1);
                   
@@ -89,13 +92,18 @@ public class GraphPanel extends JPanel
                Object o = selected;
                if (o instanceof CircleNode && tool==null){
              	  setIdSelected(map.get(selected));
-             	  gf.getGestionLivre().getContenu().setListeSections(gf.getGestionLivre().getContenu().getListeSections());
-             	  Section s = gf.getGestionLivre().getContenu().getSectionById(getIdSelected());
-             	  gf.getInfosTextArea().setText(s.getTexte());
-             	  gf.getT().setText(s.getNom());
+             	  int[] idsSect = gf.getGestionLivre().getContenu().getIdSections();
+             	  Section s = null;
+             	  for (int i=0;i<idsSect.length;i++){
+             		  if (idsSect[i]==getIdSelected()){
+                     	  gf.getInfosTextArea().setText(gf.getGestionLivre().getContenu().getTexteSection(idsSect[i]));
+                     	  gf.getT().setText(gf.getGestionLivre().getContenu().getNomSection(idsSect[i]));
+                     	  
+             		  }
+             	  }
              	  gf.getListObjet().removeAllItems();
-             	  for (int i=0;i<gf.getGestionLivre().getContenu().getListeObjet().size();i++){ 
-             		  gf.getListObjet().addItem(gf.getGestionLivre().getContenu().getListeObjet().get(i).getNom());
+             	  for (int i=0;i<gf.getGestionLivre().getContenu().getNomsObjets().size();i++){ 
+             		  gf.getListObjet().addItem(gf.getGestionLivre().getContenu().getNomsObjets().get(i));
              	  }        
              	  gf.getContentPane().getComponent(2).setVisible(true);
                }
