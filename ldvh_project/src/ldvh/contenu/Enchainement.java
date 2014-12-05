@@ -8,14 +8,14 @@ public class Enchainement {
 	private Integer id;
 	private Section sectionAvant;
 	private Section sectionApres;
-	private List <Objet> objets;
+	private List <Objet> listeObjets;
 	
 	protected Enchainement(int id, String description, Section sectionAvant, Section sectionApres) {
 		this.id = id;
 		this.description = description;
 		this.sectionAvant = sectionAvant;
 		this.sectionApres = sectionApres;
-		this.objets = new ArrayList<Objet>();
+		this.listeObjets = new ArrayList<Objet>();
 	}
 	
 	protected boolean modifierSectionAvant(Section section) {
@@ -41,24 +41,33 @@ public class Enchainement {
 	
 	protected List<String> getNomsObjets() {
 		ArrayList <String> listeNoms = new ArrayList <String> ();
-		for (int i = 0, length = objets.size(); i < length; ++i) {
-			listeNoms.add(objets.get(i).getNom());
+		for (int i = 0, length = listeObjets.size(); i < length; ++i) {
+			listeNoms.add(listeObjets.get(i).getNom());
 		}
 		return listeNoms;
 	}
 
-	protected boolean ajouterObjet(Objet nom) {
-		if (!this.objets.contains(nom)) {
-			this.objets.add(nom);
+	protected boolean ajouterObjet(Objet objet) {
+		if (!this.listeObjets.contains(objet)) {
+			this.listeObjets.add(objet);
 			return true;
 		}
 		return false;
 	}
 	
-	protected boolean supprimerObjet(Objet nom) {
-		if (this.objets.remove(nom)) {
+	protected boolean supprimerObjet(Objet objet) {
+		if (this.listeObjets.contains(objet)) {
+			this.listeObjets.remove(objet);
 			return true;
 		}
 		return false;
+	}
+	
+	protected String getDescription() {
+		return this.description;
+	}
+	
+	protected int getId() {
+		return id;
 	}
 }

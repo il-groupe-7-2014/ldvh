@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map.Entry;
+import java.util.Random;
 import java.util.Set;
 
 import ldvh.interfaces.IContenu;
@@ -53,30 +55,41 @@ public class GestionContenu implements IContenu {
 	}
 	
 	public boolean ajouterSection(String nom, String texte) {
-		hashMapSections.put(hashMapSections.size(), new Section(hashMapSections.size(), texte, nom));
+		int id = 0;
+		do {
+			id = (new Random(System.nanoTime())).nextInt();
+		} while (!hashMapEnchainements.containsKey(id));
+		hashMapSections.put(id, new Section(id, texte, nom));
 		return true;
 	}
 	
 	public boolean supprimerSection(int idSection) {
 		List <Enchainement> liste = hashMapSections.get(idSection).getListEnchainementAvant();
-		for (int i = 0, length = liste.size(); i < length; ++i) {
-			liste.get(i).supprimer();
+		while (liste.size() >= 0) {
+			liste.get(0).supprimer();
+			hashMapEnchainements.remove(liste.get(0).getId());
 		}
 		liste = hashMapSections.get(idSection).getListEnchainementApres();
-		for (int i = 0, length = liste.size(); i < length; ++i) {
-			liste.get(i).supprimer();
+		while (liste.size() >= 0) {
+			liste.get(0).supprimer();
+			hashMapEnchainements.remove(liste.get(0).getId());
 		}
-		return false;
+		hashMapSections.remove(idSection);
+		return true;
 	}
 
 	public boolean supprimerObjet(String nomObjet) {
-		Iterator<Objet> ite = listeObjets.iterator();
-		while(ite.hasNext()) {
-			Objet o = ite.next();
-			if(o.getNom().compareTo(nomObjet)==0) {
-				listeObjets.remove(o);
-				return true;
+		int objet = -1;
+		for (int i = 0, length = listeObjets.size(); i < length && objet == -1; ++i) {
+			if (listeObjets.get(i).getNom().compareTo(nomObjet) == 0) {
+				objet = i;
 			}
+		}
+		for(Entry <Integer, Enchainement> entry : hashMapEnchainements.entrySet()) {
+			entry.getValue().supprimerObjet(listeObjets.get(objet));
+		}
+		for(Entry <Integer, Section> entry : hashMapSections.entrySet()) {
+			entry.getValue().supprimerObjet(listeObjets.get(objet));
 		}
 		return false;
 	}
@@ -112,11 +125,17 @@ public class GestionContenu implements IContenu {
 	}
 
 	public String getTexteEnchainement(int idEnchainement) {
-		return null;
+		return hashMapEnchainements.get(idEnchainement).getDescription();
 	}
 
 	public boolean supprimerEnchainement(int idEnchainement) {
-		return false;
+		if (!hashMapEnchainements.containsKey(idEnchainement)) {
+			return false;
+		}
+		Enchainement enchainement = hashMapEnchainements.get(idEnchainement);
+		enchainement.supprimer();
+		hashMapEnchainements.remove(idEnchainement);
+		return true;
 	}
 
 	public boolean setPremiereSection(int idSection) {
@@ -128,14 +147,16 @@ public class GestionContenu implements IContenu {
 	}
 
 	public boolean ajouterEnchainement(String description, Section avant, Section apres) {
-		int id = hashMapEnchainements.size() + 1;
-		Enchainement enchainement = new Enchainement(id, description, avant, apres);
-		hashMapEnchainements.put(id, enchainement);
+		int id = 0;
+		do {
+			id = (new Random(System.nanoTime())).nextInt();
+		} while (!hashMapEnchainements.containsKey(id));
+		hashMapEnchainements.put(id, new Enchainement(id, description, avant, apres));
 		return true;
 	}
 
 	public List <String> getNomsObjetsSection(int idSection) {
-		return null;
+		return hashMapSections.get(idSection).getNomsObjets();
 	}
 
 	public int [] getIdSections() {

@@ -24,21 +24,20 @@ public class Section {
 		etat = new Inatteignable();
 	}
 
-	protected boolean supprimerObjet(String nom) {
-		Iterator<Objet> ite = listeObjets.iterator();
-		while(ite.hasNext()) {
-			Objet o = ite.next();
-			if(o.getNom().compareTo(nom)==0) {
-				listeObjets.remove(o);
-				return true;
-			}
+	protected boolean supprimerObjet(Objet objet) {
+		if (listeObjets.contains(objet)) {
+			listeObjets.remove(objet);
+			return true;
 		}
 		return false;
 	}
 
-	protected boolean ajouterObjet(String nom) {
-		listeObjets.add(new Objet(nom));
-		return true;
+	protected boolean ajouterObjet(Objet objet) {
+		if (!listeObjets.contains(objet)) {
+			listeObjets.add(objet);
+			return true;
+		}
+		return false;
 	}
 
 	protected boolean ajouterEnchainementAvant(Enchainement enchainement) {
