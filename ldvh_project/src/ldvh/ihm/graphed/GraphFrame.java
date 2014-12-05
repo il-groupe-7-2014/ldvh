@@ -67,8 +67,8 @@ public class GraphFrame extends JFrame
       newItem.addActionListener(new ActionListener() {
     	  
     	  public void actionPerformed(ActionEvent event) {
-    		  String title = JOptionPane.showInputDialog(GraphFrame.this, "Titre du livre : ","");
-    		  String authorName = JOptionPane.showInputDialog(GraphFrame.this, "Nom de l'auteur du livre : ","");
+    		  String title = JOptionPane.showInputDialog(GraphFrame.this, "Titre du livre : ","Créer un livre",1);
+    		  String authorName = JOptionPane.showInputDialog(GraphFrame.this, "Nom de l'auteur du livre : ","Créer un livre",1);
     		  gestionLivre.creerLivre(title,authorName);
     	  }
             
@@ -168,7 +168,7 @@ public class GraphFrame extends JFrame
    */
    private void constructFrameComponents()
    {
-      toolBar = new ToolBar(graph);
+      toolBar = new ToolBar(graph, gestionLivre);
       panel = new GraphPanel(toolBar, graph, gestionLivre, infosTextArea);
       scrollPane = new JScrollPane(panel);
       
@@ -182,7 +182,7 @@ public class GraphFrame extends JFrame
       contentPane.add(toolBar, BorderLayout.NORTH);
       contentPane.add(scrollPane, BorderLayout.CENTER);
       contentPane.add(infosPanel, BorderLayout.EAST);
-      //this.revalidate();
+      //revalidate();
    }
 
    /**

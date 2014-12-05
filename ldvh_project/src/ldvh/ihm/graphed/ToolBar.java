@@ -1,9 +1,22 @@
 package ldvh.ihm.graphed;
 
-import java.awt.*;
-import java.awt.geom.*;
-import java.util.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.geom.AffineTransform;
+import java.util.ArrayList;
+
+import javax.swing.ButtonGroup;
+import javax.swing.Icon;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JToggleButton;
+
+import ldvh.livre.GestionLivre;
 
 /**
    A tool bar that contains node and edge prototype icons.
@@ -11,13 +24,22 @@ import javax.swing.*;
 */
 public class ToolBar extends JPanel
 {
+	
+	private static final int BUTTON_SIZE = 25;
+	private static final int OFFSET = 4;
+
+	private ButtonGroup group;
+	private ArrayList tools;
+	private GestionLivre gestionLivre;
+	
    /**
       Constructs a tool bar with no icons.
    */
-   public ToolBar(Graph graph)
+   public ToolBar(Graph graph, GestionLivre gestionLivre)
    {
-      group = new ButtonGroup();
-      tools = new ArrayList();
+      this.group = new ButtonGroup();
+      this.tools = new ArrayList();
+      this.gestionLivre = gestionLivre;
 
       JToggleButton grabberButton = new JToggleButton(new 
          Icon()
@@ -46,10 +68,26 @@ public class ToolBar extends JPanel
       for (int i = 0; i < edgeTypes.length; i++)
          add(edgeTypes[i]);
       
-      JButton addObjetButton = new JButton("Obj");
+		JButton addObjetButton = new JButton(new Icon() {
+			public int getIconHeight() { return BUTTON_SIZE; }
+			public int getIconWidth() { return BUTTON_SIZE; }
+
+			public void paintIcon(Component c, Graphics g, int x, int y) {
+				Graphics2D g2 = (Graphics2D) g;
+				GraphPanel.drawGrabber(g2, x + BUTTON_SIZE/2, y + BUTTON_SIZE/2);
+			}
+		});
       group.add(addObjetButton);
       add(addObjetButton);
-      tools.add(null);
+      
+      addObjetButton.addActionListener(new ActionListener() {
+    		  
+    	  public void actionPerformed(ActionEvent e) {
+    		  String nomObjet = JOptionPane.showInputDialog(ToolBar.this,"Nom de l'objet : ","Créer un objet",1);
+    		  ToolBar.this.gestionLivre.getContenu().ajouterObjet(nomObjet);
+    	  }
+    	  
+      });
    }
 
    /**
@@ -132,10 +170,5 @@ public class ToolBar extends JPanel
       add(button);      
       tools.add(e);
    }
- 
-   private ButtonGroup group;
-   private ArrayList tools;
-
-   private static final int BUTTON_SIZE = 25;
-   private static final int OFFSET = 4;
+   
 }
