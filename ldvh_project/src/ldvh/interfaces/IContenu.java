@@ -53,4 +53,8 @@ public interface IContenu {
 	
 	public List <String> getNomsObjetsEnchainement(int idEnchainement);
 	
+	public List<String> getListeObjets();
+	
+	public boolean deleteAllObjets();
+	
 }

@@ -6,7 +6,7 @@ import java.awt.geom.*;
 /**
    A circular node that is filled with a color.
 */
-public class CircleNode implements Node
+public class CircleNode implements Node 
 {
    /**
       Construct a circle node with a given size and color.

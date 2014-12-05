@@ -12,6 +12,10 @@ public class GestionLivre extends Livre implements ILivre {
 		
 	}
 	
+	public Livre getLivre() {
+		return livre;
+	}
+	
 	public IContenu getContenu() {
 		return contenu;
 	}

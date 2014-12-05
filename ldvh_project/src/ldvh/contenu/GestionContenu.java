@@ -17,6 +17,21 @@ public class GestionContenu implements IContenu {
 	private HashMap<Integer,Enchainement> hashMapEnchainements;
 	private List<Objet> listeObjets;
 	
+	public List<String> getListeObjets() {
+		List<String> list = new ArrayList<String>();
+		for(int i=0;i<listeObjets.size();i++)
+			list.add(listeObjets.get(i).getNom());
+		return list;
+		
+	}
+	
+	public boolean deleteAllObjets() {
+		boolean bool = true;
+		for (int i=0;i<listeObjets.size();i++)
+			bool = supprimerObjet(listeObjets.get(i).getNom());
+		return bool;
+	}
+
 	public GestionContenu() {
 		hashMapSections = new HashMap<Integer,Section>();
 		hashMapEnchainements = new HashMap<Integer,Enchainement>();
