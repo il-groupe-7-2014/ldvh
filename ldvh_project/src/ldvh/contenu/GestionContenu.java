@@ -16,11 +16,13 @@ public class GestionContenu implements IContenu {
 	private HashMap<Integer,Section> hashMapSections;
 	private HashMap<Integer,Enchainement> hashMapEnchainements;
 	private List<Objet> listeObjets;
+	private Random rng;
 
 	public GestionContenu() {
 		hashMapSections = new HashMap<Integer,Section>();
 		hashMapEnchainements = new HashMap<Integer,Enchainement>();
 		listeObjets = new ArrayList<Objet>();
+		rng = new Random();
 	}
 
 	public int[] getIdSectionSuivante(int idSection) {
@@ -65,25 +67,25 @@ public class GestionContenu implements IContenu {
 		return hashMapSections.get(idSection).getNom();
 	}
 	
-	public boolean ajouterSection(String nom, String texte) {
+	public int ajouterSection(String nom, String texte) {
 		int id = 0;
 		do {
-			id = (new Random(System.nanoTime())).nextInt();
-		} while (!hashMapEnchainements.containsKey(id));
+			id = rng.nextInt();
+		} while (hashMapSections.containsKey(id));
 		hashMapSections.put(id, new Section(id, texte, nom));
-		return true;
+		return id;
 	}
 	
 	public boolean supprimerSection(int idSection) {
 		List <Enchainement> liste = hashMapSections.get(idSection).getListEnchainementAvant();
-		while (liste.size() >= 0) {
-			liste.get(0).supprimer();
-			hashMapEnchainements.remove(liste.get(0).getId());
+		for(Enchainement e : liste){
+			e.supprimer();
+			hashMapEnchainements.remove(e.getId());
 		}
 		liste = hashMapSections.get(idSection).getListEnchainementApres();
-		while (liste.size() >= 0) {
-			liste.get(0).supprimer();
-			hashMapEnchainements.remove(liste.get(0).getId());
+		for(Enchainement e : liste){
+			e.supprimer();
+			hashMapEnchainements.remove(e.getId());
 		}
 		hashMapSections.remove(idSection);
 		return true;
@@ -170,8 +172,8 @@ public class GestionContenu implements IContenu {
 	public boolean ajouterEnchainement(String description, Section avant, Section apres) {
 		int id = 0;
 		do {
-			id = (new Random(System.nanoTime())).nextInt();
-		} while (!hashMapEnchainements.containsKey(id));
+			id = rng.nextInt();
+		} while (hashMapEnchainements.containsKey(id));
 		hashMapEnchainements.put(id, new Enchainement(id, description, avant, apres));
 		return true;
 	}

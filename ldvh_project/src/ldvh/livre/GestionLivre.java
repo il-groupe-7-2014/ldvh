@@ -9,7 +9,7 @@ public class GestionLivre extends Livre implements ILivre {
 	private IContenu contenu;
 	
 	public GestionLivre() {
-		
+		contenu = new GestionContenu();
 	}
 	
 	public Livre getLivre() {

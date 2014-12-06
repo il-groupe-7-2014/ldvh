@@ -20,7 +20,7 @@ public interface IContenu {
 	
 	public String getTexteSection(int idSection);
 	
-	public boolean ajouterSection(String nom, String texte);
+	public int ajouterSection(String nom, String texte);
 	
 	public boolean supprimerSection(int idSection);
 	
