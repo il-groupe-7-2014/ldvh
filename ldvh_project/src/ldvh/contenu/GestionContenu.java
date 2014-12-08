@@ -28,6 +28,16 @@ public class GestionContenu implements IContenu {
 	public int[] getIdSectionSuivante(int idSection) {
 		return null;
 	}
+	
+	public int getIdSectionApres(int idEnchainement) {
+		Enchainement en = hashMapEnchainements.get(idEnchainement);
+		return en.getIdSectionApres();
+	}
+	
+	public int getIdSectionAvant(int idEnchainement) {
+		Enchainement en = hashMapEnchainements.get(idEnchainement);
+		return en.getIdSectionAvant();
+	}
 
 	public boolean isSection(int idSection) {
 		return hashMapSections.containsKey(idSection);
@@ -170,13 +180,13 @@ public class GestionContenu implements IContenu {
 		return false;
 	}
 
-	public boolean ajouterEnchainement(String description, Section avant, Section apres) {
+	public int ajouterEnchainement(String description, int avant, int apres) {
 		int id = 0;
 		do {
 			id = rng.nextInt();
 		} while (hashMapEnchainements.containsKey(id));
-		hashMapEnchainements.put(id, new Enchainement(id, description, avant, apres));
-		return true;
+		hashMapEnchainements.put(id, new Enchainement(id, description, hashMapSections.get(avant), hashMapSections.get(apres)));
+		return id;
 	}
 
 	public List <String> getNomsObjetsSection(int idSection) {

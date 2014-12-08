@@ -11,7 +11,7 @@ public class Enchainement {
 	private Section sectionApres;
 	private List <Objet> listeObjets;
 	
-	protected Enchainement(int id, String description, Section sectionAvant, Section sectionApres) {
+	Enchainement(int id, String description, Section sectionAvant, Section sectionApres) {
 		this.id = id;
 		this.description = description;
 		this.sectionAvant = sectionAvant;
@@ -19,28 +19,28 @@ public class Enchainement {
 		this.listeObjets = new ArrayList<Objet>();
 	}
 	
-	protected boolean modifierSectionAvant(Section section) {
+	boolean modifierSectionAvant(Section section) {
 		this.sectionAvant = section;
 		return true;
 	}
 
-	protected boolean modifierSectionApres(Section section) {
+	boolean modifierSectionApres(Section section) {
 		this.sectionApres = section;
 		return true;
 	}
 
-	protected boolean setDescription(String description) {
+	boolean setDescription(String description) {
 		this.description = description;
 		return true;
 	}
 	
-	protected boolean supprimer() {
+	boolean supprimer() {
 		sectionAvant.supprimerEnchainementAvant(this);
 		sectionApres.supprimerEnchainementApres(this);
 		return true;
 	}
 	
-	protected List<String> getNomsObjets() {
+	List<String> getNomsObjets() {
 		ArrayList <String> listeNoms = new ArrayList <String> ();
 		for (int i = 0, length = listeObjets.size(); i < length; ++i) {
 			listeNoms.add(listeObjets.get(i).getNom());
@@ -48,7 +48,7 @@ public class Enchainement {
 		return listeNoms;
 	}
 
-	protected boolean ajouterObjet(Objet objet) {
+	boolean ajouterObjet(Objet objet) {
 		if (!this.listeObjets.contains(objet)) {
 			this.listeObjets.add(objet);
 			return true;
@@ -56,7 +56,7 @@ public class Enchainement {
 		return false;
 	}
 	
-	protected boolean supprimerObjet(Objet objet) {
+	boolean supprimerObjet(Objet objet) {
 		if (this.listeObjets.contains(objet)) {
 			this.listeObjets.remove(objet);
 			return true;
@@ -64,11 +64,20 @@ public class Enchainement {
 		return false;
 	}
 	
-	protected String getDescription() {
+	String getDescription() {
 		return this.description;
 	}
 	
-	protected int getId() {
+	int getId() {
 		return id;
 	}
+	
+	int getIdSectionApres() {
+		return sectionApres.getId();
+	}
+	
+	int getIdSectionAvant() {
+		return sectionAvant.getId();
+	}
+	
 }

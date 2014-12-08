@@ -73,6 +73,7 @@ public class GraphFrame extends JFrame {
 	private ToolBar toolBar;
 	private GestionLivre gestionLivre = new GestionLivre();
 	private HashMap<Object, Integer> mapSections = new HashMap<Object, Integer>();
+	private HashMap<Object, Integer> mapEnchainements = new HashMap<Object, Integer>();
 
 	public void setInfosTextArea(JTextArea infosTextArea) {
 		this.infosTextArea = infosTextArea;
@@ -419,6 +420,11 @@ public class GraphFrame extends JFrame {
 		JFrame newSection = new NewSectionFrame(this, node);
 		newSection.setVisible(true);
 	}
+	
+	public void createNewEnchainement(Edge edge, Node nAvant, Node nApres) {
+		JFrame newEnchainement = new NewEnchainementFrame(this, edge, nAvant, nApres);
+		newEnchainement.setVisible(true);
+	}
 
 	public void modifySection(Node node) {
 		int id = mapSections.get(node);
@@ -428,9 +434,23 @@ public class GraphFrame extends JFrame {
 		JFrame modifySection = new ModifySectionFrame(this, node, id, nom, text);
 		modifySection.setVisible(true);
 	}
+	
+	public void modifyEnchainement(Edge edge) {
+		int id = mapEnchainements.get(edge);
+		String text = gestionLivre.getContenu().getTexteEnchainement(id);
+		int idAvant = gestionLivre.getContenu().getIdSectionAvant(id);
+		int idApres = gestionLivre.getContenu().getIdSectionApres(id);
+
+		JFrame modifyEnchainement = new ModifyEnchainementFrame(this, edge, id, idApres, idAvant, text);
+		modifyEnchainement.setVisible(true);
+	}
 
 	public HashMap<Object, Integer> getMapSections() {
 		return mapSections;
+	}
+	
+	public HashMap<Object, Integer> getMapEnchainements() {
+		return mapEnchainements;
 	}
 
 	public GraphPanel getPanel() {

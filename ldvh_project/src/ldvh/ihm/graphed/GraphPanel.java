@@ -109,8 +109,12 @@ public class GraphPanel extends JPanel
                   Edge prototype = (Edge) tool;
                   Edge newEdge = (Edge) prototype.clone(); 
                   if (graph.connect(newEdge, 
-                         rubberBandStart, mousePoint))
+                         rubberBandStart, mousePoint)) {
+                	 Node nAvant = graph.findNode(rubberBandStart);
+                	 Node nApres = graph.findNode(mousePoint);
                      selected = newEdge;
+                     gf.createNewEnchainement(newEdge,nAvant,nApres);
+                  }
                }
 
                revalidate();

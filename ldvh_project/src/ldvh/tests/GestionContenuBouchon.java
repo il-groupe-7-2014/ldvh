@@ -122,8 +122,8 @@ public class GestionContenuBouchon implements IContenu {
 	}
 
 	@Override
-	public boolean ajouterEnchainement(String description, Section avant,
-			Section apres) {
+	public boolean ajouterEnchainement(String description, int avant,
+			int apres) {
 		// TODO Auto-generated method stub
 		return false;
 	}
