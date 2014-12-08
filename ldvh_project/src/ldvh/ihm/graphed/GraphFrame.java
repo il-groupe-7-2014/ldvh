@@ -106,7 +106,7 @@ public class GraphFrame extends JFrame {
 		setJMenuBar(menuBar);
 		JMenu fileMenu = new JMenu("Fichier");
 		menuBar.add(fileMenu);
-
+		setLocationRelativeTo(null);
 		JMenuItem newItem = new JMenuItem("Créer un livre");
 		newItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
@@ -127,6 +127,7 @@ public class GraphFrame extends JFrame {
 							"Création réussie", JOptionPane.INFORMATION_MESSAGE);
 					toolBar.setVisible(true);
 					panel.setVisible(true);
+					setTitle("LDVH - " + nom + " - " + auteur);
 				} else {
 					JOptionPane.showMessageDialog(null, "ok",
 							"Les champs saisis sont incorrects!",

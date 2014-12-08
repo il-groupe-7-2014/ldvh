@@ -32,6 +32,8 @@ public class SectionFrame extends JFrame {
 	JLabel label_obj;
 	JButton add_objet;
 	JPanel p_objets;
+	JPanel p_center;
+	JPanel p_southobj;
 	JComboBox<String> list_obj;
 	
 	public SectionFrame(GraphFrame parent){
@@ -41,8 +43,9 @@ public class SectionFrame extends JFrame {
 		p_text = new JPanel();
 		p_buttons = new JPanel();
 		p_objets = new JPanel();
+		p_center = new JPanel();
+		p_southobj = new JPanel();
 		
-
 		
 		l_nom = new JLabel("Nom : ");
 		l_text = new JLabel("Texte : ");
@@ -63,10 +66,12 @@ public class SectionFrame extends JFrame {
 		p_objets.add(list_obj,BorderLayout.CENTER);
 		p_objets.add(add_objet, BorderLayout.EAST);
 		
+		p_center.add(p_text, BorderLayout.NORTH);
+		p_center.add(p_objets, BorderLayout.CENTER);
+		
 		setSize(640, 640);
-		getContentPane().add(p_objets,BorderLayout.CENTER);
 		getContentPane().add(p_nom,BorderLayout.NORTH);
-		getContentPane().add(p_text,BorderLayout.CENTER);
+		getContentPane().add(p_center,BorderLayout.CENTER);
 		getContentPane().add(p_buttons,BorderLayout.SOUTH);
 	}
 	

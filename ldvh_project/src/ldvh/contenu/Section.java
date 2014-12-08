@@ -26,6 +26,7 @@ public class Section {
 
 	boolean supprimerObjet(Objet objet) {
 		if (listeObjets.contains(objet)) {
+			System.out.println("il contieneeent=>"+objet.getNom());
 			listeObjets.remove(objet);
 			return true;
 		}
