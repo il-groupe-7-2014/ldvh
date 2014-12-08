@@ -82,21 +82,10 @@ public class GraphPanel extends JPanel
                Object o = selected;
                if (o instanceof CircleNode && tool==null){
             	   gf.modifySection(n);
-//             	  setIdSelected(map.get(selected));
-//             	  int[] idsSect = gf.getGestionLivre().getContenu().getIdSections();
-//             	  Section s = null;
-//             	  for (int i=0;i<idsSect.length;i++){
-//             		  if (idsSect[i]==getIdSelected()){
-//                     	  gf.getInfosTextArea().setText(gf.getGestionLivre().getContenu().getTexteSection(idsSect[i]));
-//                     	  gf.getT().setText(gf.getGestionLivre().getContenu().getNomSection(idsSect[i]));
-//                     	  
-//             		  }
-//             	  }
-//             	  gf.getListObjet().removeAllItems();
-//             	  for (int i=0;i<gf.getGestionLivre().getContenu().getNomsObjets().size();i++){ 
-//             		  gf.getListObjet().addItem(gf.getGestionLivre().getContenu().getNomsObjets().get(i));
-//             	  }        
-//             	  gf.getContentPane().getComponent(2).setVisible(true);
+               }
+               
+               if (o instanceof Edge && tool==null){
+            	   gf.modifyEnchainement(e);
                }
             }
 

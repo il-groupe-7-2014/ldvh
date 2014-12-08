@@ -57,7 +57,7 @@ public class ModifyEnchainementFrame extends EnchainementFrame {
 		
 		b_suppress.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				gf.getGestionLivre().getContenu().supprimerSection(id);
+				gf.getGestionLivre().getContenu().supprimerEnchainement(id);
 				gf.getGraph().removeEdge(edge);
 				gf.getPanel().repaint();
 				setVisible(false);
@@ -101,7 +101,7 @@ public class ModifyEnchainementFrame extends EnchainementFrame {
 				}
 				objetsAAdd = new ArrayList<String>();
 				
-				List<String> objetss = gf.getGestionLivre().getContenu().getNomsObjetsSection(id);
+				List<String> objetss = gf.getGestionLivre().getContenu().getNomsObjetsEnchainement(id);
 				for (String o : objetss){
 					dlm.addElement(o);
 				}

@@ -140,8 +140,10 @@ public class GestionContenu implements IContenu {
 
 	public boolean modifierEnchainement(int idSectionAvant, int idSectionApres,
 			String texte, List <String> listObjets, int idEnchainement) {
+		Enchainement e = hashMapEnchainements.get(idEnchainement);
+		e.setDescription(texte);
 		
-		return false;
+		return true;
 	}
 
 	public int[] getIdEnchainementsSuivants() {
@@ -207,7 +209,7 @@ public class GestionContenu implements IContenu {
 		Enchainement enchainement = hashMapEnchainements.get(idEnchainement);
 		if (enchainement != null)
 			return enchainement.getNomsObjets();
-		return null;
+		return new ArrayList<String>();
 	}
 	
 }

@@ -10,6 +10,14 @@ public class GestionContenuBouchon implements IContenu {
 	public GestionContenuBouchon() {
 		
 	}
+	
+	public int getIdSectionApres(int idEnchainement) {
+		return 0;
+	}
+	
+	public int getIdSectionAvant(int idEnchainement) {
+		return 0;
+	}
 
 	@Override
 	public int[] getIdSectionSuivante(int idSection) {
@@ -122,10 +130,10 @@ public class GestionContenuBouchon implements IContenu {
 	}
 
 	@Override
-	public boolean ajouterEnchainement(String description, int avant,
+	public int ajouterEnchainement(String description, int avant,
 			int apres) {
 		// TODO Auto-generated method stub
-		return false;
+		return 0;
 	}
 
 	@Override

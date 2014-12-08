@@ -16,10 +16,6 @@ public class NewEnchainementFrame extends EnchainementFrame {
 	public NewEnchainementFrame(GraphFrame parent, final Edge edge, final Node nAvant, final Node nApres) {
 		super(parent);
 		this.parent = parent;
-
-		
-		System.out.println("ooo "+NewEnchainementFrame.this.parent.getMapSections().containsKey(nAvant));
-		System.out.println("ooob "+NewEnchainementFrame.this.parent.getMapSections().containsKey(nApres));
 		
 		b_valid = new JButton("Valider");
 		b_cancel = new JButton("Annuler");
