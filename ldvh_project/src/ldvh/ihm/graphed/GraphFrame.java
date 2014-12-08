@@ -125,6 +125,8 @@ public class GraphFrame extends JFrame {
 							+ " et l'auteur est "
 							+ gestionLivre.getLivre().getAuteur(),
 							"Création réussie", JOptionPane.INFORMATION_MESSAGE);
+					toolBar.setVisible(true);
+					panel.setVisible(true);
 				} else {
 					JOptionPane.showMessageDialog(null, "ok",
 							"Les champs saisis sont incorrects!",
@@ -268,7 +270,10 @@ public class GraphFrame extends JFrame {
 		toolBar = new ToolBar(graph);
 		panel = new GraphPanel(toolBar, graph);
 		scrollPane = new JScrollPane(panel);
-
+		
+		toolBar.setVisible(false);
+		panel.setVisible(false);
+		
 		infosTextArea = new JTextArea(NUMBER_ROWS_TEXT_INFOS,
 				NUMBER_COLS_TEXT_INFOS);
 		infosTextArea.setEditable(true);
@@ -334,35 +339,7 @@ public class GraphFrame extends JFrame {
 
 		});
 
-		/**
-		 * Obtenir liste des objets
-		 */
-
-		obtenirListeObjet.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent event) {
-				if (panel.getSelected() instanceof CircleNode) {
-					String texteObj = "-";
-					List<String> objetss = gestionLivre.getContenu()
-							.getNomsObjetsSection(panel.getIdSelected());
-					if (objetss != null) {
-						for (String o : objetss) {
-							texteObj = texteObj + o + "\n";
-						}
-						if (objetss.size() > 0) {
-							JOptionPane.showMessageDialog(null,
-									"Voici la liste des objets de cette section:  \n"
-											+ texteObj);
-						} else {
-							JOptionPane.showMessageDialog(null,
-									"Aucun objet associé à cette section");
-						}
-
-					}
-
-				}
-			}
-
-		});
+		
 
 		infosPanel.add(labelTexte, BorderLayout.SOUTH);
 		infosPanel.add(infosTextArea, BorderLayout.CENTER);

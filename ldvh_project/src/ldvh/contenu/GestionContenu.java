@@ -54,8 +54,9 @@ public class GestionContenu implements IContenu {
 	
 	public boolean deleteAllObjets() {
 		boolean bool = true;
-		for (int i=0;i<listeObjets.size();i++)
+		for (int i=0;i<listeObjets.size();i++){
 			bool = supprimerObjet(listeObjets.get(i).getNom());
+		}
 		return bool;
 	}
 	
