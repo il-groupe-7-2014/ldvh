@@ -64,8 +64,8 @@ public class GestionContenu implements IContenu {
 	
 	public boolean deleteAllObjets() {
 		boolean bool = true;
-		for (int i=0;i<listeObjets.size();i++){
-			bool = supprimerObjet(listeObjets.get(i).getNom());
+		for(Entry <Integer, Section> entry : hashMapSections.entrySet()) {
+			entry.getValue().supprimerAllObjets();
 		}
 		return bool;
 	}
