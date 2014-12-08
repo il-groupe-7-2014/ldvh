@@ -44,7 +44,7 @@ public class SectionFrame extends JFrame {
 		p_text.add(l_text);
 		p_text.add(a_text);
 		
-		setSize(320, 320);
+		setSize(640, 480);
 		getContentPane().add(p_nom,BorderLayout.NORTH);
 		getContentPane().add(p_text,BorderLayout.CENTER);
 		getContentPane().add(p_buttons,BorderLayout.SOUTH);
