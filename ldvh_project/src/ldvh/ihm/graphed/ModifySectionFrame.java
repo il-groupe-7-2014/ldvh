@@ -60,6 +60,7 @@ public class ModifySectionFrame extends SectionFrame {
 			public void actionPerformed(ActionEvent event) {
 				gf.getGestionLivre().getContenu().supprimerSection(id);
 				gf.getGraph().removeNode(node);
+				gf.getPanel().repaint();
 				setVisible(false);
 				
 			}

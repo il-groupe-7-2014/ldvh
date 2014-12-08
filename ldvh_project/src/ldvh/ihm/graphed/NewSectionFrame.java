@@ -34,6 +34,7 @@ public class NewSectionFrame extends SectionFrame {
 		b_cancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
 				gf.getGraph().removeNode(node);
+				gf.getPanel().repaint();
 				setVisible(false);
 				
 			}

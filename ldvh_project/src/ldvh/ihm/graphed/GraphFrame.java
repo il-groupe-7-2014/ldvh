@@ -270,9 +270,9 @@ public class GraphFrame extends JFrame {
 		toolBar = new ToolBar(graph);
 		panel = new GraphPanel(toolBar, graph);
 		scrollPane = new JScrollPane(panel);
-		
-		toolBar.setVisible(false);
+
 		panel.setVisible(false);
+		toolBar.setVisible(false);
 		
 		infosTextArea = new JTextArea(NUMBER_ROWS_TEXT_INFOS,
 				NUMBER_COLS_TEXT_INFOS);
@@ -419,12 +419,12 @@ public class GraphFrame extends JFrame {
 		JFrame newSection = new NewSectionFrame(this, node);
 		newSection.setVisible(true);
 	}
-	
-	public void modifySection(Node node){
+
+	public void modifySection(Node node) {
 		int id = mapSections.get(node);
 		String nom = gestionLivre.getContenu().getNomSection(id);
 		String text = gestionLivre.getContenu().getTexteSection(id);
-		
+
 		JFrame modifySection = new ModifySectionFrame(this, node, id, nom, text);
 		modifySection.setVisible(true);
 	}
